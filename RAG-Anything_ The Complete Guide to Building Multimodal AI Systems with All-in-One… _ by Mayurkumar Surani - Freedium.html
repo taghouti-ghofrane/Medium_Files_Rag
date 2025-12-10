@@ -1,0 +1,2105 @@
+
+<!-- saved from url=(0146)https://freedium.cfd/https://mayursurani.medium.com/rag-anything-the-complete-guide-to-building-multimodal-ai-systems-with-all-in-one-6b88137fba4e -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RAG-Anything: The Complete Guide to Building Multimodal AI Systems with All-in-One… | by Mayurkumar Surani - Freedium</title>
+    
+    <meta name="description" content="RAG-Anything Framework: Complete Guide to Multimodal RAG Systems | 2026">
+    <meta name="keywords" content="medium, paywall, medium.com, paywall breakthrough">
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!--<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>-->
+
+    <script src="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/tailwindcssv3-freedium-hotfix.js.téléchargement"></script>
+
+    <link href="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/unbound.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://freedium.cfd/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://freedium.cfd/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://freedium.cfd/favicon-16x16.png">
+    <link rel="manifest" href="https://freedium.cfd/site.webmanifest">
+    <link rel="mask-icon" href="https://freedium.cfd/safari-pinned-tab.svg" color="#00aba9">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <script src="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/highlight.min.js.téléchargement"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.4/dist/lazyload.min.js"></script> -->
+    <script src="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/lightense.min.js.téléchargement"></script>
+
+    <script>
+        window._resizeIframe = function (obj) {
+            const logMessage = `Received _resizeIframe call: iframe=${obj.iframe ? obj.iframe.id : 'unknown'}, height=${obj.height}`;
+            if (obj.iframe) {
+                obj.iframe.height = obj.height;
+            }
+            console.log(obj.iframe)
+            console.log(logMessage);
+        };
+    </script>
+
+    <script>
+        window.addEventListener('message', function (event) {
+            console.log('Event data:', JSON.stringify(event.data))
+            if (typeof event.data === 'string') {
+                let parsedData = JSON.parse(event.data);
+                console.log('Event data type:', typeof parsedData)
+                if (parsedData && parsedData.method === 'iframe.resize' && parsedData.context === 'iframe.resize') {
+                    console.log('Resizing iframe - Source:', parsedData.src, 'Height:', parsedData.height, 'Method:', parsedData.method)
+                    const iframes = document.querySelectorAll('iframe');
+                    for (let iframe of iframes) {
+                        if (iframe.src === parsedData.src) {
+                            console.log('Setting iframe height to:', parsedData.height)
+                            console.log(iframe)
+                            iframe.height = parsedData.height;
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <style>
+        .responsive-object {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .responsive-object iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-4{bottom:1rem}.left-4{left:1rem}.right-0{right:0px}.right-5{right:1.25rem}.top-0{top:0px}.top-5{top:1.25rem}.z-20{z-index:20}.m-1\.5{margin:0.375rem}.m-2{margin:0.5rem}.m-auto{margin:auto}.mx-auto{margin-left:auto;margin-right:auto}.my-8{margin-top:2rem;margin-bottom:2rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mr-3{margin-right:0.75rem}.mt-0{margin-top:0px}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-1{height:0.25rem}.h-11{height:2.75rem}.h-3{height:0.75rem}.h-full{height:100%}.max-h-\[95vh\]{max-height:95vh}.max-h-screen{max-height:100vh}.w-11{width:2.75rem}.w-11\/12{width:91.666667%}.w-3{width:0.75rem}.w-full{width:100%}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.list-decimal{list-style-type:decimal}.list-disc{list-style-type:disc}.appearance-none{-webkit-appearance:none;appearance:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.break-normal{overflow-wrap:normal;word-break:normal}.break-words{overflow-wrap:break-word}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-2{border-width:2px}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-500{--tw-bg-opacity:1;background-color:rgb(107 114 128 / var(--tw-bg-opacity, 1))}.bg-gray-600{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.fill-current{fill:currentColor}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-1{padding:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.pl-4{padding-left:1rem}.pl-8{padding-left:2rem}.pr-4{padding-right:1rem}.pt-1{padding-top:0.25rem}.pt-12{padding-top:3rem}.pt-20{padding-top:5rem}.pt-5{padding-top:1.25rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-8{line-height:2rem}.leading-normal{line-height:1.5}.leading-tight{line-height:1.25}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.no-underline{-webkit-text-decoration-line:none;text-decoration-line:none}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-green-500:hover{--tw-border-opacity:1;border-color:rgb(34 197 94 / var(--tw-border-opacity, 1))}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-red-600:hover{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.hover\:bg-yellow-600:hover{--tw-bg-opacity:1;background-color:rgb(202 138 4 / var(--tw-bg-opacity, 1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:no-underline:hover{-webkit-text-decoration-line:none;text-decoration-line:none}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.dark\:border-gray-700:is(.dark *){--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.dark\:bg-gray-600:is(.dark *){--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.dark\:bg-gray-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.dark\:bg-gray-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.dark\:bg-green-700:is(.dark *){--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.dark\:bg-green-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(22 101 52 / var(--tw-bg-opacity, 1))}.dark\:bg-zinc-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity, 1))}.dark\:text-gray-100:is(.dark *){--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity, 1))}.dark\:text-gray-200:is(.dark *){--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.dark\:text-white:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:text-yellow-400:is(.dark *){--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.dark\:hover\:text-white:hover:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:inline{display:inline}.md\:max-w-3xl{max-width:48rem}.md\:max-w-4xl{max-width:56rem}.md\:max-w-xl{max-width:36rem}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1024px){.lg\:mt-0{margin-top:0px}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:w-auto{width:auto}.lg\:items-center{align-items:center}}</style><link rel="stylesheet" href="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/a11y-light.min.css"><style id="lightense-images-css">
+:root {
+  --lightense-z-index: 999999;
+  --lightense-backdrop: var(--bg-color-80, rgba(255, 255, 255, .98));
+  --lightense-duration: 300ms;
+  --lightense-timing-func: cubic-bezier(.2, 0, .1, 1);
+}
+
+.lightense-backdrop {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: calc(var(--lightense-z-index) - 1);
+  padding: 0;
+  margin: 0;
+  transition: opacity var(--lightense-duration) ease;
+  cursor: zoom-out;
+  opacity: 0;
+  background-color: var(--lightense-backdrop);
+  visibility: hidden;
+}
+
+@supports (-webkit-backdrop-filter: blur(30px)) {
+  .lightense-backdrop {
+    background-color: var(--lightense-backdrop);
+    -webkit-backdrop-filter: blur(30px);
+  }
+}
+
+@supports (backdrop-filter: blur(30px)) {
+  .lightense-backdrop {
+    background-color: var(--lightense-backdrop);
+    backdrop-filter: blur(30px);
+  }
+}
+
+.lightense-wrap {
+  position: relative;
+  transition: transform var(--lightense-duration) var(--lightense-timing-func);
+  z-index: var(--lightense-z-index);
+  pointer-events: none;
+}
+
+.lightense-target {
+  cursor: zoom-in;
+  transition: transform var(--lightense-duration) var(--lightense-timing-func);
+  pointer-events: auto;
+}
+
+.lightense-open {
+  cursor: zoom-out;
+}
+
+.lightense-transitioning {
+  pointer-events: none;
+}</style></head>
+<body class="bg-white dark:bg-gray-800"><div class="fixed bottom-4 left-4 hidden" style="z-index: 999999;">
+    <button id="openProblemModal" class="m-1.5 flex items-center bg-red-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+                svg {
+                    fill: #ffffff
+                }
+            </style>
+            <path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path>
+        </svg>
+    </button>
+    <button id="darkModeToggle" class="m-1.5 flex items-center bg-blue-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none">
+        <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" class="hidden">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path>
+        </svg>
+        <!-- SVG icon for light mode (e.g., a sun) -->
+        <svg class="" id="lightIcon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"></path>
+        </svg>
+    </button>
+</div>
+
+
+<div class="storage-notification-container fixed top-5 right-5 p-2 max-h-[95vh] overflow-y-auto hidden" style="z-index: 999999;">
+    <div class="p-4 text-center bg-white border border-gray-300 rounded-md shadow-sm dark:bg-gray-800">
+        <p class="pb-2 text-xl text-black dark:text-white font-semibold">Milestone: 20GB Reached</p>
+        <p class="pb-3 text-black dark:text-white">
+            We’ve reached 20GB of stored data — thank you for helping us grow!
+        </p>
+        <div class="mt-4 space-x-2">
+            <a href="https://patreon.com/Freedium" rel="noreferrer" target="_blank" title="Patreon">
+                <button class="px-3 py-2 font-semibold text-white bg-red-500 rounded hover:bg-red-600 transition-colors">
+                    Patreon
+                </button>
+            </a>
+            <a href="https://ko-fi.com/zhymabekroman" rel="noreferrer" target="_blank" title="Ko-fi">
+                <button class="px-3 py-2 font-semibold text-white bg-blue-500 rounded hover:bg-blue-600 transition-colors">
+                    Ko-fi
+                </button>
+            </a>
+            <a href="https://liberapay.com/ZhymabekRoman/" rel="noreferrer" target="_blank" title="Liberapay">
+                <button class="px-3 py-2 font-semibold text-white bg-yellow-500 rounded hover:bg-yellow-600 transition-colors">
+                    Liberapay
+                </button>
+            </a>
+        </div>
+        <div class="mt-3">
+            <button class="px-4 py-2 font-semibold text-white bg-gray-600 rounded hover:bg-gray-700 transition-colors storage-close-button">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+
+<nav id="header" class="fixed top-0 w-full bg-white shadow z-9 dark:bg-gray-800 dark:text-white" style="z-index: 999990;">
+    
+    <div id="progress" class="top-0 z-20 h-1" style="background: linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0); --scroll: Infinity%;"></div>
+    <div class="flex flex-wrap items-center justify-between w-full py-3 mx-auto mt-0 md:max-w-4xl">
+        <div class="pl-4">
+            <a class="text-base text-xl font-extrabold text-green-500 no-underline hover:no-underline" href="https://freedium.cfd/" onclick="navigateToOrigin()">Freedium</a>
+        </div>
+        <div class="block pr-4 lg:hidden">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 text-gray-500 border border-gray-600 rounded appearance-none dark:text-white hover:text-gray-900 dark:hover:text-white hover:border-green-500 focus:outline-none">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex-grow w-full mt-2 bg-white lg:flex lg:items-center lg:w-auto lg:block lg:mt-0 dark:bg-gray-800 hidden" id="nav-content">
+            <ul class="items-center justify-end flex-1 list-reset lg:flex">
+                <li class="mr-3">
+                    <a class="inline-block text-gray-600 no-underline dark:text-white hover:text-gray-900 dark:hover:text-white hover:text-underline" href="https://ko-fi.com/zhymabekroman" target="_blank">ko-fi</a>
+                </li>
+                <!-- <li class="mr-3">
+                    <a class="inline-block text-gray-600 no-underline dark:text-white hover:text-gray-900 dark:hover:text-white hover:text-underline"
+                        href="https://codeberg.org/Freedium-cfd/web" target="_blank">source code</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-gray-600 no-underline dark:text-white hover:text-gray-900 dark:hover:text-white hover:text-underline"
+                        href="https://romans-status-page.vercel.app/status/freedium" target="_blank">status page</a>
+                </li> -->
+                <li class="mr-3">
+                    <a class="inline-block text-gray-600 no-underline dark:text-white hover:text-gray-900 dark:hover:text-white hover:text-underline" href="https://liberapay.com/ZhymabekRoman/" target="_blank" rel="noreferrer">librepay</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-gray-600 no-underline dark:text-white hover:text-gray-900 dark:hover:text-white hover:text-underline" href="https://patreon.com/Freedium" target="_blank" rel="noreferrer">patreon</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container w-full pt-20 mx-auto text-gray-900 break-words bg-white md:max-w-3xl dark:text-gray-200 dark:bg-gray-800">
+    <div class="w-full px-4 text-xl leading-normal text-gray-800 md:px-6 dark:text-gray-100" style="font-family:Georgia,serif;">
+        
+        <div class="font-sans">
+            <p class="pb-3 text-base font-bold text-green-500 md:text-sm">
+                <a href="https://mayursurani.medium.com/rag-anything-the-complete-guide-to-building-multimodal-ai-systems-with-all-in-one-6b88137fba4e#bypass" class="text-sm font-bold text-green-500 no-underline md:text-sm hover:underline ">&lt; Go to the original</a>
+            </p>
+            
+                <img alt="Preview image" style="max-height: 65vh;
+                            width: auto;
+                            margin: auto" loading="eager" referrerpolicy="no-referrer" role="presentation" src="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/0_nWecVqXZY64kTwt_.png" class="lightense-target">
+            
+            <h1 class="pt-6 pb-2 font-sans text-3xl font-bold text-gray-900 break-normal dark:text-gray-100 md:text-4xl">RAG-Anything: The Complete Guide to Building Multimodal AI Systems with All-in-One…</h1>
+            <h2 class="pt-1 font-sans font-medium text-gray-600 break-normal dark:text-gray-200 text-1xl md:text-1xl">RAG-Anything Framework: Complete Guide to Multimodal RAG Systems | 2026</h2>
+        </div>
+        <div class="m-2 mt-5 bg-gray-100 border border-gray-300 dark:bg-gray-600">
+            <div class="flex items-center p-4 space-x-4">
+                <div class="flex-shrink-0">
+                    <a href="https://medium.com/@mayursurani" target="_blank" title="Data Engineer | Data Scientist | Machine Learner | Digital Citizen" class="relative block">
+                        <img src="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/1_K34XwaFmaN58ebLOE7IWlw.jpeg" alt="Mayurkumar Surani" loading="eager" referrerpolicy="no-referrer" class="rounded-full h-11 w-11 no-lightense">
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+                    </a>
+                </div>
+                <div class="flex-grow">
+                    <a href="https://medium.com/@mayursurani" target="_blank" title="Data Engineer | Data Scientist | Machine Learner | Digital Citizen" class="block font-semibold text-gray-900 dark:text-white">Mayurkumar Surani</a>
+                    <button class="px-3 py-1 mt-1 text-sm text-white bg-green-500 rounded-lg dark:bg-green-700">
+                        <a href="https://medium.com/@mayursurani" target="_blank" title="Data Engineer | Data Scientist | Machine Learner | Digital Citizen" class="block text-sm text-white">Follow</a>
+                    </button>
+                </div>
+            </div>
+            <div class="px-4 pb-2">
+                <div class="flex flex-wrap items-center space-x-2 text-sm text-gray-500 dark:text-white">
+                    
+                    <span class="text-gray-500 dark:text-white">a11y-light</span>
+                    <span class="md:inline">·</span>
+                    <span class="text-gray-500 dark:text-white">October 16, 2025 (Updated: October 16, 2025)</span>
+                    <span class="md:inline">·</span>
+                    <span class="text-yellow-500 dark:text-yellow-400">Free: No</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 main-content">
+            <h3 id="cbc5" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl ">Introduction: Why RAG-Anything is Revolutionizing AI Knowledge Retrieval 🎯</h3><p class="leading-8 mt-3">Hey there! If you're working with Large Language Models (LLMs) and feeling frustrated by their limitations with multimodal content, you're in the right place. Let me tell you about something that's genuinely changing the game in AI engineering.</p><p class="leading-8 mt-7">Traditional RAG systems? They're stuck in a text-only world. But here's the reality: modern knowledge doesn't live in plain text anymore. Your company's documentation has charts, diagrams, tables, mathematical equations, and images all working together to convey meaning. When your RAG system can only read the text and ignores everything else, you're losing critical information.</p><p class="leading-8 mt-7">That's where <strong><a style="text-decoration: underline;" rel="noopener noreferrer" title="" href="https://github.com/HKUDS/RAG-Anything" target="_blank">RAG-Anything</a></strong> comes in. Developed by researchers at The University of Hong Kong, this open-source framework is the first truly unified approach to multimodal retrieval-augmented generation. It doesn't just process text — it understands and retrieves knowledge from images, tables, charts, mathematical expressions, and their interconnections.</p><p class="leading-8 mt-7"><strong>In this comprehensive guide,</strong> I'll walk you through everything you need to know about RAG-Anything: the architecture, implementation details, real-world use cases, and hands-on code examples. Whether you're a data engineer, AI researcher, or ML engineer, you'll learn how to build production-ready multimodal RAG systems.</p><div class="mt-7"><img loading="eager" alt="None" class="pt-5 m-auto lightense-target" role="presentation" referrerpolicy="no-referrer" src="./RAG-Anything_ The Complete Guide to Building Multimodal AI Systems with All-in-One… _ by Mayurkumar Surani - Freedium_files/0_nWecVqXZY64kTwt_.png"></div><figcaption class="mt-3 text-sm text-center text-gray-500 dark:text-gray-200">Universal RAG framework RAG-Anything by irui Guo, Xubin Ren, Lingrui Xu, Jiahao Zhang, <strong>Chao Huang</strong>
+The University of Hong Kong</figcaption><h3 id="e5f6" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">What is RAG-Anything? Understanding the Fundamentals 📚</h3><h3 id="f774" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">The Problem with Traditional RAG Systems</h3><p class="leading-8 mt-3">Before we dive into RAG-Anything, let's understand what's broken in current RAG implementations. Traditional Retrieval-Augmented Generation works like this:</p><p class="leading-8 mt-7"><strong>Standard RAG Pipeline:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Documents get chunked into text segments</li><li class="mt-3">Text chunks are embedded using models like OpenAI's text-embedding-ada-002</li><li class="mt-3">Embeddings are stored in vector databases (Pinecone, Weaviate, ChromaDB)</li><li class="mt-3">User queries are embedded and matched against stored vectors</li><li class="mt-3">Retrieved text chunks are fed to LLMs for answer generation</li></ul><p class="leading-8 mt-7">Sounds good, right? But here's the catch: <strong>this only works for text</strong>. When you have a PDF with financial tables, scientific diagrams, or architectural blueprints, traditional RAG systems either skip them entirely or convert them to text descriptions that lose critical structural information.</p><h3 id="5921" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">The RAG-Anything Solution: Unified Multimodal Knowledge Retrieval</h3><p class="leading-8 mt-3">RAG-Anything fundamentally reimagines how we think about knowledge retrieval. Instead of treating different modalities as separate data types, it conceptualizes them as <strong>interconnected knowledge entities </strong>within a unified graph structure.</p><p class="leading-8 mt-7"><strong>Key Innovation: </strong>Dual-graph construction that captures:</p><ul class="pl-8 mt-2 list-disc"><li class="mt-3"><strong>Cross-modal relationships (</strong>how images relate to tables, how equations connect to text)</li><li class="mt-3"><strong>Textual semantics </strong>(traditional semantic understanding)</li><li class="mt-3"><strong>Structural knowledge</strong> (layout, hierarchy, spatial relationships)</li></ul><p class="leading-8 mt-7">This means when you ask "What was the revenue growth in Q3?", RAG-Anything doesn't just search text — it understands that the answer might be in a bar chart, a financial table, or a combination of both, and it knows how to navigate these relationships intelligently.</p><h3 id="9aeb" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Core Architecture: How RAG-Anything Actually Works 🏗️</h3><p class="leading-8 mt-3">Let's break down the technical architecture into digestible components. Understanding this will help you implement and customize RAG-Anything for your specific use cases.</p><h3 id="7cdd" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">1. Multi-Stage Multimodal Pipeline</h3><p class="leading-8 mt-3">RAG-Anything implements a sophisticated multi-stage pipeline that extends traditional RAG architectures:</p><p class="leading-8 mt-7"><strong>Stage 1: Document Parsing and Modality Detection</strong></p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># Conceptual flow - actual implementation uses specialized parsers</span>
+document_elements = {
+    <span class="hljs-string">'text_blocks'</span>: [],
+    <span class="hljs-string">'images'</span>: [],
+    <span class="hljs-string">'tables'</span>: [],
+    <span class="hljs-string">'equations'</span>: [],
+    <span class="hljs-string">'charts'</span>: [],
+    <span class="hljs-string">'diagrams'</span>: []
+}
+
+<span class="hljs-comment"># Each element maintains spatial and semantic metadata</span>
+<span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> parsed_document:
+    element_type = detect_modality(element)
+    element_metadata = {
+        <span class="hljs-string">'position'</span>: get_spatial_coordinates(element),
+        <span class="hljs-string">'context'</span>: extract_surrounding_context(element),
+        <span class="hljs-string">'relationships'</span>: identify_cross_references(element)
+    }
+    document_elements[element_type].append({
+        <span class="hljs-string">'content'</span>: element,
+        <span class="hljs-string">'metadata'</span>: element_metadata
+    })</code></pre><p class="leading-8 mt-7"><strong>Stage 2: Dual-Graph Construction</strong></p><p class="leading-8 mt-7">This is where RAG-Anything's magic happens. The framework builds two interconnected graphs:</p><p class="leading-8 mt-7"><strong>Knowledge Graph (Cross-Modal):</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Nodes represent different modality elements (text paragraphs, images, tables)</li><li class="mt-3">Edges represent relationships (references, explanations, dependencies)</li><li class="mt-3">Captures structural knowledge about how information flows across modalities</li></ul><p class="leading-8 mt-7"><strong>Semantic Graph (Textual):</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Nodes represent semantic concepts extracted from text</li><li class="mt-3">Edges represent semantic relationships</li><li class="mt-3">Enables traditional semantic search capabilities</li></ul><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># Simplified dual-graph representation</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">DualGraph</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.knowledge_graph = nx.DiGraph()  <span class="hljs-comment"># Cross-modal relationships</span>
+        self.semantic_graph = nx.DiGraph()   <span class="hljs-comment"># Semantic relationships</span>
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_multimodal_node</span>(<span class="hljs-params">self, element, modality_type</span>):
+        <span class="hljs-comment"># Add to knowledge graph with modality metadata</span>
+        self.knowledge_graph.add_node(
+            element.<span class="hljs-built_in">id</span>,
+            content=element.content,
+            modality=modality_type,
+            embeddings=self.generate_embeddings(element, modality_type)
+        )
+        
+        <span class="hljs-comment"># If text, also add to semantic graph</span>
+        <span class="hljs-keyword">if</span> modality_type == <span class="hljs-string">'text'</span>:
+            semantic_concepts = self.extract_concepts(element.content)
+            <span class="hljs-keyword">for</span> concept <span class="hljs-keyword">in</span> semantic_concepts:
+                self.semantic_graph.add_node(concept)
+                self.semantic_graph.add_edge(element.<span class="hljs-built_in">id</span>, concept)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_cross_modal_edge</span>(<span class="hljs-params">self, source_id, target_id, relationship_type</span>):
+        self.knowledge_graph.add_edge(
+            source_id, 
+            target_id,
+            relationship=relationship_type,
+            weight=self.calculate_relationship_strength(source_id, target_id)
+        )</code></pre><p class="leading-8 mt-7"><strong>Stage 3: Cross-Modal Hybrid Retrieval</strong></p><p class="leading-8 mt-7">This is the retrieval engine that combines structural navigation with semantic matching:</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CrossModalRetriever</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, dual_graph, embedding_model</span>):
+        self.dual_graph = dual_graph
+        self.embedding_model = embedding_model
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retrieve</span>(<span class="hljs-params">self, query, top_k=<span class="hljs-number">5</span></span>):
+        <span class="hljs-comment"># Step 1: Semantic matching</span>
+        query_embedding = self.embedding_model.encode(query)
+        semantic_candidates = self.semantic_search(query_embedding, top_k * <span class="hljs-number">2</span>)
+        
+        <span class="hljs-comment"># Step 2: Graph-based expansion</span>
+        expanded_candidates = []
+        <span class="hljs-keyword">for</span> candidate <span class="hljs-keyword">in</span> semantic_candidates:
+            <span class="hljs-comment"># Navigate knowledge graph to find related multimodal content</span>
+            related_nodes = self.dual_graph.get_neighbors(
+                candidate.<span class="hljs-built_in">id</span>,
+                max_hops=<span class="hljs-number">2</span>,
+                relationship_types=[<span class="hljs-string">'references'</span>, <span class="hljs-string">'explains'</span>, <span class="hljs-string">'visualizes'</span>]
+            )
+            expanded_candidates.extend(related_nodes)
+        
+        <span class="hljs-comment"># Step 3: Re-ranking with cross-modal relevance</span>
+        reranked_results = self.cross_modal_rerank(
+            query,
+            expanded_candidates,
+            top_k
+        )
+        
+        <span class="hljs-keyword">return</span> reranked_results
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cross_modal_rerank</span>(<span class="hljs-params">self, query, candidates, top_k</span>):
+        scores = []
+        <span class="hljs-keyword">for</span> candidate <span class="hljs-keyword">in</span> candidates:
+            <span class="hljs-comment"># Calculate multi-factor relevance score</span>
+            semantic_score = self.calculate_semantic_similarity(query, candidate)
+            structural_score = self.calculate_structural_relevance(candidate)
+            modality_score = self.calculate_modality_importance(candidate, query)
+            
+            combined_score = (
+                <span class="hljs-number">0.5</span> * semantic_score +
+                <span class="hljs-number">0.3</span> * structural_score +
+                <span class="hljs-number">0.2</span> * modality_score
+            )
+            scores.append((candidate, combined_score))
+        
+        <span class="hljs-comment"># Return top-k highest scoring candidates</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sorted</span>(scores, key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-number">1</span>], reverse=<span class="hljs-literal">True</span>)[:top_k]</code></pre><h3 id="25d6" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">2. Multimodal Embedding Strategy</h3><p class="leading-8 mt-3">RAG-Anything uses specialized embedding models for different modalities:</p><p class="leading-8 mt-7"><strong>Text Embeddings:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Models: BERT, RoBERTa, or domain-specific transformers</li><li class="mt-3">Captures semantic meaning and context</li></ul><p class="leading-8 mt-7"><strong>Image Embeddings:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Models: CLIP, ViT (Vision Transformer)</li><li class="mt-3">Understands visual content and its relationship to text</li></ul><p class="leading-8 mt-7"><strong>Table Embeddings:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Custom table encoders that preserve structure</li><li class="mt-3">Captures both content and layout information</li></ul><p class="leading-8 mt-7"><strong>Equation Embeddings:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">LaTeX-aware encoders</li><li class="mt-3">Understands mathematical relationships</li></ul><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MultiModalEmbedder</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.text_encoder = SentenceTransformer(<span class="hljs-string">'all-MiniLM-L6-v2'</span>)
+        self.image_encoder = CLIPModel.from_pretrained(<span class="hljs-string">'openai/clip-vit-base-patch32'</span>)
+        self.table_encoder = TableEncoder()  <span class="hljs-comment"># Custom implementation</span>
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">embed</span>(<span class="hljs-params">self, content, modality_type</span>):
+        <span class="hljs-keyword">if</span> modality_type == <span class="hljs-string">'text'</span>:
+            <span class="hljs-keyword">return</span> self.text_encoder.encode(content)
+        <span class="hljs-keyword">elif</span> modality_type == <span class="hljs-string">'image'</span>:
+            <span class="hljs-keyword">return</span> self.image_encoder.encode_image(content)
+        <span class="hljs-keyword">elif</span> modality_type == <span class="hljs-string">'table'</span>:
+            <span class="hljs-keyword">return</span> self.table_encoder.encode(content)
+        <span class="hljs-keyword">elif</span> modality_type == <span class="hljs-string">'equation'</span>:
+            <span class="hljs-keyword">return</span> self.embed_equation(content)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">embed_equation</span>(<span class="hljs-params">self, latex_content</span>):
+        <span class="hljs-comment"># Convert LaTeX to structured representation</span>
+        parsed_equation = self.parse_latex(latex_content)
+        <span class="hljs-comment"># Encode structure and symbols</span>
+        <span class="hljs-keyword">return</span> self.equation_encoder.encode(parsed_equation)</code></pre><h3 id="4b8d" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Setting Up RAG-Anything: Installation and Configuration 🛠️</h3><p class="leading-8 mt-3">Let's get hands-on! I'll walk you through setting up RAG-Anything from scratch.</p><h3 id="2f03" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Prerequisites</h3><p class="leading-8 mt-3">Before we start, make sure you have:</p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Python 3.8 or higher</li><li class="mt-3">CUDA-capable GPU (recommended for production, CPU works for testing)</li><li class="mt-3">At least 16GB RAM (32GB recommended for large documents)</li><li class="mt-3">Git installed</li></ul><h3 id="49f6" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Step 1: Clone the Repository</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-bash hljs" data-highlighted="yes"><span class="hljs-comment"># Clone the RAG-Anything repository</span>
+git <span class="hljs-built_in">clone</span> https://github.com/HKUDS/RAG-Anything.git
+<span class="hljs-built_in">cd</span> RAG-Anything
+
+<span class="hljs-comment"># Create a virtual environment (highly recommended)</span>
+python -m venv venv
+<span class="hljs-built_in">source</span> venv/bin/activate  <span class="hljs-comment"># On Windows: venv\Scripts\activate</span></code></pre><h3 id="597a" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Step 2: Install Dependencies</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-bash hljs" data-highlighted="yes"><span class="hljs-comment"># Install core dependencies</span>
+pip install -r requirements.txt
+
+<span class="hljs-comment"># Install additional packages for specific use cases</span>
+pip install torch torchvision  <span class="hljs-comment"># For GPU support</span>
+pip install transformers sentence-transformers  <span class="hljs-comment"># For embeddings</span>
+pip install networkx matplotlib  <span class="hljs-comment"># For graph operations and visualization</span>
+pip install pymupdf pillow  <span class="hljs-comment"># For document parsing</span>
+pip install chromadb  <span class="hljs-comment"># For vector storage</span></code></pre><h3 id="f824" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Step 3: Environment Configuration</h3><p class="leading-8 mt-3">Create a <code class="p-1.5 bg-gray-300 dark:bg-gray-600">.env</code> file in the project root:</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-bash hljs" data-highlighted="yes"><span class="hljs-comment"># Copy the example environment file</span>
+<span class="hljs-built_in">cp</span> env.example .<span class="hljs-built_in">env</span></code></pre><p class="leading-8 mt-7">Edit <code class="p-1.5 bg-gray-300 dark:bg-gray-600">.env</code> with your configuration:</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-ini hljs" data-highlighted="yes"><span class="hljs-comment"># API Keys (if using cloud services)</span>
+<span class="hljs-attr">OPENAI_API_KEY</span>=your_openai_key_here
+<span class="hljs-attr">ANTHROPIC_API_KEY</span>=your_anthropic_key_here
+
+<span class="hljs-comment"># Model Configuration</span>
+<span class="hljs-attr">TEXT_EMBEDDING_MODEL</span>=all-MiniLM-L6-v2
+<span class="hljs-attr">IMAGE_EMBEDDING_MODEL</span>=openai/clip-vit-base-patch32
+<span class="hljs-attr">LLM_MODEL</span>=gpt-<span class="hljs-number">4</span>  <span class="hljs-comment"># or claude-3-opus, llama-2-70b, etc.</span>
+
+<span class="hljs-comment"># Vector Database</span>
+<span class="hljs-attr">VECTOR_DB_TYPE</span>=chromadb  <span class="hljs-comment"># Options: chromadb, pinecone, weaviate</span>
+<span class="hljs-attr">VECTOR_DB_PATH</span>=./data/vector_store
+
+<span class="hljs-comment"># Processing Configuration</span>
+<span class="hljs-attr">MAX_CHUNK_SIZE</span>=<span class="hljs-number">512</span>
+<span class="hljs-attr">CHUNK_OVERLAP</span>=<span class="hljs-number">50</span>
+<span class="hljs-attr">MAX_WORKERS</span>=<span class="hljs-number">4</span>
+
+<span class="hljs-comment"># Graph Configuration</span>
+<span class="hljs-attr">GRAPH_MAX_HOPS</span>=<span class="hljs-number">2</span>
+<span class="hljs-attr">GRAPH_RELATIONSHIP_THRESHOLD</span>=<span class="hljs-number">0.7</span></code></pre><h3 id="167e" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Step 4: Verify Installation</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># test_installation.py</span>
+<span class="hljs-keyword">from</span> raganything <span class="hljs-keyword">import</span> RAGAnything
+<span class="hljs-keyword">from</span> raganything.parsers <span class="hljs-keyword">import</span> DocumentParser
+<span class="hljs-keyword">from</span> raganything.embedders <span class="hljs-keyword">import</span> MultiModalEmbedder
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">test_installation</span>():
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Testing RAG-Anything installation..."</span>)
+    
+    <span class="hljs-comment"># Initialize components</span>
+    <span class="hljs-keyword">try</span>:
+        parser = DocumentParser()
+        embedder = MultiModalEmbedder()
+        rag = RAGAnything()
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"✅ All components initialized successfully!"</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"❌ Installation test failed: <span class="hljs-subst">{<span class="hljs-built_in">str</span>(e)}</span>"</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    test_installation()</code></pre><p class="leading-8 mt-7">Run the test:</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-typescript hljs" data-highlighted="yes">python test_installation.<span class="hljs-property">py</span></code></pre><h3 id="0f28" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Building Your First Multimodal RAG Application 💻</h3><p class="leading-8 mt-3">Now let's build a complete application that demonstrates RAG-Anything's capabilities. We'll create a system that can answer questions about technical documentation containing text, diagrams, and tables.</p><h3 id="dad9" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Complete Implementation Example</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># multimodal_rag_app.py</span>
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path
+<span class="hljs-keyword">from</span> raganything <span class="hljs-keyword">import</span> RAGAnything
+<span class="hljs-keyword">from</span> raganything.parsers <span class="hljs-keyword">import</span> DocumentParser
+<span class="hljs-keyword">from</span> raganything.embedders <span class="hljs-keyword">import</span> MultiModalEmbedder
+<span class="hljs-keyword">from</span> raganything.retrievers <span class="hljs-keyword">import</span> CrossModalRetriever
+<span class="hljs-keyword">from</span> raganything.generators <span class="hljs-keyword">import</span> ResponseGenerator
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MultimodalRAGSystem</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, config_path=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-string">"""Initialize the multimodal RAG system"""</span>
+        self.config = self.load_config(config_path)
+        self.parser = DocumentParser()
+        self.embedder = MultiModalEmbedder()
+        self.retriever = CrossModalRetriever(
+            embedding_model=self.embedder,
+            top_k=self.config.get(<span class="hljs-string">'top_k'</span>, <span class="hljs-number">5</span>)
+        )
+        self.generator = ResponseGenerator(
+            model_name=self.config.get(<span class="hljs-string">'llm_model'</span>, <span class="hljs-string">'gpt-4'</span>)
+        )
+        self.knowledge_base = <span class="hljs-literal">None</span>
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">load_config</span>(<span class="hljs-params">self, config_path</span>):
+        <span class="hljs-string">"""Load configuration from file or environment"""</span>
+        <span class="hljs-keyword">if</span> config_path <span class="hljs-keyword">and</span> os.path.exists(config_path):
+            <span class="hljs-keyword">import</span> json
+            <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(config_path, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> f:
+                <span class="hljs-keyword">return</span> json.load(f)
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">'top_k'</span>: <span class="hljs-built_in">int</span>(os.getenv(<span class="hljs-string">'TOP_K'</span>, <span class="hljs-number">5</span>)),
+            <span class="hljs-string">'llm_model'</span>: os.getenv(<span class="hljs-string">'LLM_MODEL'</span>, <span class="hljs-string">'gpt-4'</span>),
+            <span class="hljs-string">'max_chunk_size'</span>: <span class="hljs-built_in">int</span>(os.getenv(<span class="hljs-string">'MAX_CHUNK_SIZE'</span>, <span class="hljs-number">512</span>))
+        }
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ingest_documents</span>(<span class="hljs-params">self, document_paths</span>):
+        <span class="hljs-string">"""
+        Ingest and process multimodal documents
+        
+        Args:
+            document_paths: List of paths to documents (PDF, DOCX, etc.)
+        """</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"📄 Ingesting <span class="hljs-subst">{<span class="hljs-built_in">len</span>(document_paths)}</span> documents..."</span>)
+        
+        all_elements = []
+        <span class="hljs-keyword">for</span> doc_path <span class="hljs-keyword">in</span> document_paths:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  Processing: <span class="hljs-subst">{doc_path}</span>"</span>)
+            
+            <span class="hljs-comment"># Parse document into multimodal elements</span>
+            elements = self.parser.parse(doc_path)
+            
+            <span class="hljs-comment"># Generate embeddings for each element</span>
+            <span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> elements:
+                element[<span class="hljs-string">'embedding'</span>] = self.embedder.embed(
+                    element[<span class="hljs-string">'content'</span>],
+                    element[<span class="hljs-string">'modality'</span>]
+                )
+            
+            all_elements.extend(elements)
+        
+        <span class="hljs-comment"># Build dual-graph knowledge base</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"🔗 Building knowledge graph..."</span>)
+        self.knowledge_base = self.retriever.build_knowledge_base(all_elements)
+        
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"✅ Ingested <span class="hljs-subst">{<span class="hljs-built_in">len</span>(all_elements)}</span> multimodal elements"</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(all_elements)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">self, question, return_sources=<span class="hljs-literal">True</span></span>):
+        <span class="hljs-string">"""
+        Query the multimodal knowledge base
+        
+        Args:
+            question: User's question
+            return_sources: Whether to return source elements
+            
+        Returns:
+            Dictionary with answer and optional sources
+        """</span>
+        <span class="hljs-keyword">if</span> self.knowledge_base <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">"No documents ingested. Call ingest_documents() first."</span>)
+        
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"🔍 Searching for: <span class="hljs-subst">{question}</span>"</span>)
+        
+        <span class="hljs-comment"># Retrieve relevant multimodal elements</span>
+        retrieved_elements = self.retriever.retrieve(
+            query=question,
+            knowledge_base=self.knowledge_base,
+            top_k=self.config[<span class="hljs-string">'top_k'</span>]
+        )
+        
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  Found <span class="hljs-subst">{<span class="hljs-built_in">len</span>(retrieved_elements)}</span> relevant elements"</span>)
+        
+        <span class="hljs-comment"># Generate response using retrieved context</span>
+        response = self.generator.generate(
+            query=question,
+            context_elements=retrieved_elements
+        )
+        
+        result = {
+            <span class="hljs-string">'answer'</span>: response[<span class="hljs-string">'text'</span>],
+            <span class="hljs-string">'confidence'</span>: response.get(<span class="hljs-string">'confidence'</span>, <span class="hljs-number">0.0</span>)
+        }
+        
+        <span class="hljs-keyword">if</span> return_sources:
+            result[<span class="hljs-string">'sources'</span>] = self.format_sources(retrieved_elements)
+        
+        <span class="hljs-keyword">return</span> result
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">format_sources</span>(<span class="hljs-params">self, elements</span>):
+        <span class="hljs-string">"""Format retrieved elements for display"""</span>
+        sources = []
+        <span class="hljs-keyword">for</span> idx, element <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(elements, <span class="hljs-number">1</span>):
+            source = {
+                <span class="hljs-string">'id'</span>: idx,
+                <span class="hljs-string">'modality'</span>: element[<span class="hljs-string">'modality'</span>],
+                <span class="hljs-string">'content_preview'</span>: self.get_preview(element),
+                <span class="hljs-string">'relevance_score'</span>: element.get(<span class="hljs-string">'score'</span>, <span class="hljs-number">0.0</span>),
+                <span class="hljs-string">'metadata'</span>: element.get(<span class="hljs-string">'metadata'</span>, {})
+            }
+            sources.append(source)
+        <span class="hljs-keyword">return</span> sources
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_preview</span>(<span class="hljs-params">self, element</span>):
+        <span class="hljs-string">"""Get a preview of the element content"""</span>
+        modality = element[<span class="hljs-string">'modality'</span>]
+        content = element[<span class="hljs-string">'content'</span>]
+        
+        <span class="hljs-keyword">if</span> modality == <span class="hljs-string">'text'</span>:
+            <span class="hljs-keyword">return</span> content[:<span class="hljs-number">200</span>] + <span class="hljs-string">'...'</span> <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(content) &gt; <span class="hljs-number">200</span> <span class="hljs-keyword">else</span> content
+        <span class="hljs-keyword">elif</span> modality == <span class="hljs-string">'table'</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"Table with <span class="hljs-subst">{<span class="hljs-built_in">len</span>(content.get(<span class="hljs-string">'rows'</span>, []))}</span> rows"</span>
+        <span class="hljs-keyword">elif</span> modality == <span class="hljs-string">'image'</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"Image: <span class="hljs-subst">{element.get(<span class="hljs-string">'metadata'</span>, {}</span>).get('caption', 'No caption')}"</span>
+        <span class="hljs-keyword">elif</span> modality == <span class="hljs-string">'equation'</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"Equation: <span class="hljs-subst">{content[:<span class="hljs-number">100</span>]}</span>"</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{modality.capitalize()}</span> element"</span>
+
+<span class="hljs-comment"># Example usage</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+    <span class="hljs-comment"># Initialize the system</span>
+    rag_system = MultimodalRAGSystem()
+    
+    <span class="hljs-comment"># Ingest documents</span>
+    documents = [
+        <span class="hljs-string">'./data/technical_manual.pdf'</span>,
+        <span class="hljs-string">'./data/research_paper.pdf'</span>,
+        <span class="hljs-string">'./data/financial_report.pdf'</span>
+    ]
+    
+    rag_system.ingest_documents(documents)
+    
+    <span class="hljs-comment"># Query the system</span>
+    questions = [
+        <span class="hljs-string">"What is the system architecture described in the technical manual?"</span>,
+        <span class="hljs-string">"What were the Q3 revenue figures?"</span>,
+        <span class="hljs-string">"Explain the mathematical model presented in the research paper"</span>
+    ]
+    
+    <span class="hljs-keyword">for</span> question <span class="hljs-keyword">in</span> questions:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"\n<span class="hljs-subst">{<span class="hljs-string">'='</span>*<span class="hljs-number">80</span>}</span>"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Question: <span class="hljs-subst">{question}</span>"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">'='</span>*<span class="hljs-number">80</span>)
+        
+        result = rag_system.query(question, return_sources=<span class="hljs-literal">True</span>)
+        
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"\nAnswer: <span class="hljs-subst">{result[<span class="hljs-string">'answer'</span>]}</span>"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Confidence: <span class="hljs-subst">{result[<span class="hljs-string">'confidence'</span>]:<span class="hljs-number">.2</span>%}</span>"</span>)
+        
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"\nSources:"</span>)
+        <span class="hljs-keyword">for</span> source <span class="hljs-keyword">in</span> result[<span class="hljs-string">'sources'</span>]:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  [<span class="hljs-subst">{source[<span class="hljs-string">'id'</span>]}</span>] <span class="hljs-subst">{source[<span class="hljs-string">'modality'</span>].upper()}</span>"</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"      Preview: <span class="hljs-subst">{source[<span class="hljs-string">'content_preview'</span>]}</span>"</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"      Relevance: <span class="hljs-subst">{source[<span class="hljs-string">'relevance_score'</span>]:<span class="hljs-number">.2</span>%}</span>"</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    main()</code></pre><h3 id="cc3d" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Advanced Document Parser Implementation</h3><p class="leading-8 mt-3">Here's how to implement a robust document parser that handles multiple formats:</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># advanced_parser.py</span>
+<span class="hljs-keyword">import</span> fitz  <span class="hljs-comment"># PyMuPDF</span>
+<span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> <span class="hljs-type">List</span>, <span class="hljs-type">Dict</span>
+<span class="hljs-keyword">import</span> re
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">AdvancedDocumentParser</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.supported_formats = [<span class="hljs-string">'.pdf'</span>, <span class="hljs-string">'.docx'</span>, <span class="hljs-string">'.pptx'</span>, <span class="hljs-string">'.html'</span>]
+        
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">parse</span>(<span class="hljs-params">self, file_path: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-type">List</span>[<span class="hljs-type">Dict</span>]:
+        <span class="hljs-string">"""Parse document and extract multimodal elements"""</span>
+        file_ext = Path(file_path).suffix.lower()
+        
+        <span class="hljs-keyword">if</span> file_ext == <span class="hljs-string">'.pdf'</span>:
+            <span class="hljs-keyword">return</span> self.parse_pdf(file_path)
+        <span class="hljs-keyword">elif</span> file_ext == <span class="hljs-string">'.docx'</span>:
+            <span class="hljs-keyword">return</span> self.parse_docx(file_path)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">f"Unsupported format: <span class="hljs-subst">{file_ext}</span>"</span>)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">parse_pdf</span>(<span class="hljs-params">self, pdf_path: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-type">List</span>[<span class="hljs-type">Dict</span>]:
+        <span class="hljs-string">"""Extract text, images, tables from PDF"""</span>
+        elements = []
+        doc = fitz.<span class="hljs-built_in">open</span>(pdf_path)
+        
+        <span class="hljs-keyword">for</span> page_num, page <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(doc):
+            <span class="hljs-comment"># Extract text blocks</span>
+            text_blocks = page.get_text(<span class="hljs-string">"blocks"</span>)
+            <span class="hljs-keyword">for</span> block <span class="hljs-keyword">in</span> text_blocks:
+                <span class="hljs-keyword">if</span> block[<span class="hljs-number">6</span>] == <span class="hljs-number">0</span>:  <span class="hljs-comment"># Text block</span>
+                    elements.append({
+                        <span class="hljs-string">'modality'</span>: <span class="hljs-string">'text'</span>,
+                        <span class="hljs-string">'content'</span>: block[<span class="hljs-number">4</span>],
+                        <span class="hljs-string">'metadata'</span>: {
+                            <span class="hljs-string">'page'</span>: page_num + <span class="hljs-number">1</span>,
+                            <span class="hljs-string">'bbox'</span>: block[:<span class="hljs-number">4</span>],
+                            <span class="hljs-string">'source'</span>: pdf_path
+                        }
+                    })
+            
+            <span class="hljs-comment"># Extract images</span>
+            images = page.get_images()
+            <span class="hljs-keyword">for</span> img_index, img <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(images):
+                xref = img[<span class="hljs-number">0</span>]
+                base_image = doc.extract_image(xref)
+                
+                elements.append({
+                    <span class="hljs-string">'modality'</span>: <span class="hljs-string">'image'</span>,
+                    <span class="hljs-string">'content'</span>: base_image[<span class="hljs-string">"image"</span>],
+                    <span class="hljs-string">'metadata'</span>: {
+                        <span class="hljs-string">'page'</span>: page_num + <span class="hljs-number">1</span>,
+                        <span class="hljs-string">'format'</span>: base_image[<span class="hljs-string">"ext"</span>],
+                        <span class="hljs-string">'source'</span>: pdf_path,
+                        <span class="hljs-string">'caption'</span>: self.extract_image_caption(page, img)
+                    }
+                })
+            
+            <span class="hljs-comment"># Extract tables</span>
+            tables = self.extract_tables_from_page(page)
+            <span class="hljs-keyword">for</span> table <span class="hljs-keyword">in</span> tables:
+                elements.append({
+                    <span class="hljs-string">'modality'</span>: <span class="hljs-string">'table'</span>,
+                    <span class="hljs-string">'content'</span>: table,
+                    <span class="hljs-string">'metadata'</span>: {
+                        <span class="hljs-string">'page'</span>: page_num + <span class="hljs-number">1</span>,
+                        <span class="hljs-string">'source'</span>: pdf_path
+                    }
+                })
+            
+            <span class="hljs-comment"># Extract equations</span>
+            equations = self.extract_equations(page)
+            <span class="hljs-keyword">for</span> equation <span class="hljs-keyword">in</span> equations:
+                elements.append({
+                    <span class="hljs-string">'modality'</span>: <span class="hljs-string">'equation'</span>,
+                    <span class="hljs-string">'content'</span>: equation,
+                    <span class="hljs-string">'metadata'</span>: {
+                        <span class="hljs-string">'page'</span>: page_num + <span class="hljs-number">1</span>,
+                        <span class="hljs-string">'source'</span>: pdf_path
+                    }
+                })
+        
+        doc.close()
+        <span class="hljs-keyword">return</span> elements
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_tables_from_page</span>(<span class="hljs-params">self, page</span>):
+        <span class="hljs-string">"""Extract tables using layout analysis"""</span>
+        tables = []
+        <span class="hljs-comment"># Implementation using table detection algorithms</span>
+        <span class="hljs-comment"># This is a simplified version</span>
+        text = page.get_text(<span class="hljs-string">"dict"</span>)
+        
+        <span class="hljs-comment"># Detect table-like structures based on alignment</span>
+        potential_tables = self.detect_table_structures(text)
+        
+        <span class="hljs-keyword">for</span> table_data <span class="hljs-keyword">in</span> potential_tables:
+            df = pd.DataFrame(table_data)
+            tables.append({
+                <span class="hljs-string">'dataframe'</span>: df,
+                <span class="hljs-string">'rows'</span>: <span class="hljs-built_in">len</span>(df),
+                <span class="hljs-string">'columns'</span>: <span class="hljs-built_in">len</span>(df.columns),
+                <span class="hljs-string">'data'</span>: df.to_dict(<span class="hljs-string">'records'</span>)
+            })
+        
+        <span class="hljs-keyword">return</span> tables
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">detect_table_structures</span>(<span class="hljs-params">self, text_dict</span>):
+        <span class="hljs-string">"""Detect table structures from text layout"""</span>
+        <span class="hljs-comment"># Simplified table detection logic</span>
+        <span class="hljs-comment"># In production, use libraries like camelot or tabula</span>
+        tables = []
+        <span class="hljs-comment"># Implementation details...</span>
+        <span class="hljs-keyword">return</span> tables
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_equations</span>(<span class="hljs-params">self, page</span>):
+        <span class="hljs-string">"""Extract mathematical equations"""</span>
+        equations = []
+        text = page.get_text()
+        
+        <span class="hljs-comment"># Detect LaTeX-style equations</span>
+        latex_pattern = <span class="hljs-string">r'\$\$(.+?)\$\$|\$(.+?)\$'</span>
+        matches = re.findall(latex_pattern, text)
+        
+        <span class="hljs-keyword">for</span> <span class="hljs-keyword">match</span> <span class="hljs-keyword">in</span> matches:
+            equation = <span class="hljs-keyword">match</span>[<span class="hljs-number">0</span>] <span class="hljs-keyword">if</span> <span class="hljs-keyword">match</span>[<span class="hljs-number">0</span>] <span class="hljs-keyword">else</span> <span class="hljs-keyword">match</span>[<span class="hljs-number">1</span>]
+            equations.append(equation)
+        
+        <span class="hljs-keyword">return</span> equations
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_image_caption</span>(<span class="hljs-params">self, page, image</span>):
+        <span class="hljs-string">"""Extract caption text near image"""</span>
+        <span class="hljs-comment"># Get image position</span>
+        img_rect = page.get_image_bbox(image)
+        
+        <span class="hljs-comment"># Search for text below image</span>
+        search_rect = fitz.Rect(
+            img_rect.x0,
+            img_rect.y1,
+            img_rect.x1,
+            img_rect.y1 + <span class="hljs-number">100</span>  <span class="hljs-comment"># Search 100 points below</span>
+        )
+        
+        caption_text = page.get_textbox(search_rect)
+        <span class="hljs-keyword">return</span> caption_text.strip() <span class="hljs-keyword">if</span> caption_text <span class="hljs-keyword">else</span> <span class="hljs-string">""</span></code></pre><h3 id="2d90" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Real-World Use Cases and Applications 🌍</h3><p class="leading-8 mt-3">Let's explore practical applications where RAG-Anything excels. I'll provide complete implementation examples for each use case.</p><h3 id="201e" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Use Case 1: Technical Documentation Assistant</h3><p class="leading-8 mt-3">Scenario: A software company needs an AI assistant that can answer questions about their technical documentation, which includes architecture diagrams, API tables, and code examples.</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># technical_docs_assistant.py</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">TechnicalDocsAssistant</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.rag_system = MultimodalRAGSystem()
+        self.doc_types = {
+            <span class="hljs-string">'api_reference'</span>: self.handle_api_query,
+            <span class="hljs-string">'architecture'</span>: self.handle_architecture_query,
+            <span class="hljs-string">'troubleshooting'</span>: self.handle_troubleshooting_query
+        }
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ingest_documentation</span>(<span class="hljs-params">self, docs_directory</span>):
+        <span class="hljs-string">"""Ingest all technical documentation"""</span>
+        doc_paths = []
+        <span class="hljs-keyword">for</span> root, dirs, files <span class="hljs-keyword">in</span> os.walk(docs_directory):
+            <span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> files:
+                <span class="hljs-keyword">if</span> file.endswith((<span class="hljs-string">'.pdf'</span>, <span class="hljs-string">'.md'</span>, <span class="hljs-string">'.html'</span>)):
+                    doc_paths.append(os.path.join(root, file))
+        
+        self.rag_system.ingest_documents(doc_paths)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">answer_technical_question</span>(<span class="hljs-params">self, question</span>):
+        <span class="hljs-string">"""Answer technical questions with code examples and diagrams"""</span>
+        <span class="hljs-comment"># Classify question type</span>
+        question_type = self.classify_question(question)
+        
+        <span class="hljs-comment"># Get base answer from RAG</span>
+        result = self.rag_system.query(question)
+        
+        <span class="hljs-comment"># Enhance with type-specific handling</span>
+        <span class="hljs-keyword">if</span> question_type <span class="hljs-keyword">in</span> self.doc_types:
+            enhanced_result = self.doc_types[question_type](result)
+            <span class="hljs-keyword">return</span> enhanced_result
+        
+        <span class="hljs-keyword">return</span> result
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_api_query</span>(<span class="hljs-params">self, base_result</span>):
+        <span class="hljs-string">"""Enhance API-related answers with code examples"""</span>
+        <span class="hljs-comment"># Extract API endpoints from sources</span>
+        api_endpoints = []
+        <span class="hljs-keyword">for</span> source <span class="hljs-keyword">in</span> base_result.get(<span class="hljs-string">'sources'</span>, []):
+            <span class="hljs-keyword">if</span> source[<span class="hljs-string">'modality'</span>] == <span class="hljs-string">'table'</span>:
+                <span class="hljs-comment"># Parse API table</span>
+                api_endpoints.extend(self.parse_api_table(source))
+        
+        <span class="hljs-comment"># Generate code example</span>
+        <span class="hljs-keyword">if</span> api_endpoints:
+            code_example = self.generate_api_example(api_endpoints[<span class="hljs-number">0</span>])
+            base_result[<span class="hljs-string">'code_example'</span>] = code_example
+        
+        <span class="hljs-keyword">return</span> base_result
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_architecture_query</span>(<span class="hljs-params">self, base_result</span>):
+        <span class="hljs-string">"""Enhance architecture answers with diagram references"""</span>
+        diagrams = [
+            s <span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> base_result.get(<span class="hljs-string">'sources'</span>, [])
+            <span class="hljs-keyword">if</span> s[<span class="hljs-string">'modality'</span>] == <span class="hljs-string">'image'</span> <span class="hljs-keyword">and</span> <span class="hljs-string">'diagram'</span> <span class="hljs-keyword">in</span> s.get(<span class="hljs-string">'metadata'</span>, {}).get(<span class="hljs-string">'caption'</span>, <span class="hljs-string">''</span>).lower()
+        ]
+        
+        <span class="hljs-keyword">if</span> diagrams:
+            base_result[<span class="hljs-string">'diagrams'</span>] = diagrams
+            base_result[<span class="hljs-string">'answer'</span>] += <span class="hljs-string">f"\n\nRefer to the architecture diagram for visual representation."</span>
+        
+        <span class="hljs-keyword">return</span> base_result
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">classify_question</span>(<span class="hljs-params">self, question</span>):
+        <span class="hljs-string">"""Classify the type of technical question"""</span>
+        question_lower = question.lower()
+        
+        <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(word <span class="hljs-keyword">in</span> question_lower <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> [<span class="hljs-string">'api'</span>, <span class="hljs-string">'endpoint'</span>, <span class="hljs-string">'request'</span>, <span class="hljs-string">'response'</span>]):
+            <span class="hljs-keyword">return</span> <span class="hljs-string">'api_reference'</span>
+        <span class="hljs-keyword">elif</span> <span class="hljs-built_in">any</span>(word <span class="hljs-keyword">in</span> question_lower <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> [<span class="hljs-string">'architecture'</span>, <span class="hljs-string">'design'</span>, <span class="hljs-string">'component'</span>, <span class="hljs-string">'system'</span>]):
+            <span class="hljs-keyword">return</span> <span class="hljs-string">'architecture'</span>
+        <span class="hljs-keyword">elif</span> <span class="hljs-built_in">any</span>(word <span class="hljs-keyword">in</span> question_lower <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> [<span class="hljs-string">'error'</span>, <span class="hljs-string">'issue'</span>, <span class="hljs-string">'problem'</span>, <span class="hljs-string">'fix'</span>]):
+            <span class="hljs-keyword">return</span> <span class="hljs-string">'troubleshooting'</span>
+        
+        <span class="hljs-keyword">return</span> <span class="hljs-string">'general'</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_api_example</span>(<span class="hljs-params">self, endpoint_info</span>):
+        <span class="hljs-string">"""Generate code example for API endpoint"""</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"""
+```python
+import requests
+
+# <span class="hljs-subst">{endpoint_info.get(<span class="hljs-string">'description'</span>, <span class="hljs-string">'API call example'</span>)}</span>
+response = requests.<span class="hljs-subst">{endpoint_info.get(<span class="hljs-string">'method'</span>, <span class="hljs-string">'get'</span>).lower()}</span>(
+    '<span class="hljs-subst">{endpoint_info.get(<span class="hljs-string">'url'</span>, <span class="hljs-string">'/api/endpoint'</span>)}</span>',
+    headers={{'Authorization': 'Bearer YOUR_TOKEN'}},
+    json=<span class="hljs-subst">{endpoint_info.get(<span class="hljs-string">'sample_payload'</span>, {}</span>)}
+)
+
+print(response.json())</span></code></pre><h3 id="9371" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Usage example</h3><p class="leading-8 mt-3">assistant = TechnicalDocsAssistant() assistant.ingest_documentation('./docs')</p><p class="leading-8 mt-7">question = "How do I authenticate with the API?" answer = assistant.answer_technical_question(question) print(answer['answer']) if 'code_example' in answer: print(answer['code_example'])</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes">
+<span class="hljs-comment">### Use Case 2: Financial Report Analysis</span>
+
+**Scenario:** Analyze quarterly financial reports containing tables, charts, <span class="hljs-keyword">and</span> textual analysis.
+
+```python
+<span class="hljs-comment"># financial_analyzer.py</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">FinancialReportAnalyzer</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.rag_system = MultimodalRAGSystem()
+        self.metrics = [<span class="hljs-string">'revenue'</span>, <span class="hljs-string">'profit'</span>, <span class="hljs-string">'expenses'</span>, <span class="hljs-string">'growth'</span>, <span class="hljs-string">'margin'</span>]
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">analyze_report</span>(<span class="hljs-params">self, report_path, queries=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-string">"""Comprehensive financial report analysis"""</span>
+        <span class="hljs-comment"># Ingest the report</span>
+        self.rag_system.ingest_documents([report_path])
+        
+        <span class="hljs-comment"># Default queries if none provided</span>
+        <span class="hljs-keyword">if</span> queries <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            queries = [
+                <span class="hljs-string">"What was the total revenue for the quarter?"</span>,
+                <span class="hljs-string">"What were the main drivers of growth?"</span>,
+                <span class="hljs-string">"What are the key risks mentioned?"</span>,
+                <span class="hljs-string">"How did expenses change compared to last quarter?"</span>
+            ]
+        
+        analysis_results = {}
+        <span class="hljs-keyword">for</span> query <span class="hljs-keyword">in</span> queries:
+            result = self.rag_system.query(query)
+            analysis_results[query] = result
+        
+        <span class="hljs-comment"># Extract financial metrics from tables</span>
+        financial_data = self.extract_financial_metrics()
+        
+        <span class="hljs-comment"># Generate summary</span>
+        summary = self.generate_executive_summary(analysis_results, financial_data)
+        
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">'qa_results'</span>: analysis_results,
+            <span class="hljs-string">'financial_metrics'</span>: financial_data,
+            <span class="hljs-string">'executive_summary'</span>: summary
+        }
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_financial_metrics</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""Extract key financial metrics from tables"""</span>
+        metrics = {}
+        
+        <span class="hljs-comment"># Query for specific financial tables</span>
+        table_query = <span class="hljs-string">"financial summary table quarterly results"</span>
+        result = self.rag_system.query(table_query)
+        
+        <span class="hljs-comment"># Parse tables from sources</span>
+        <span class="hljs-keyword">for</span> source <span class="hljs-keyword">in</span> result.get(<span class="hljs-string">'sources'</span>, []):
+            <span class="hljs-keyword">if</span> source[<span class="hljs-string">'modality'</span>] == <span class="hljs-string">'table'</span>:
+                table_data = source[<span class="hljs-string">'content'</span>]
+                metrics.update(self.parse_financial_table(table_data))
+        
+        <span class="hljs-keyword">return</span> metrics
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">parse_financial_table</span>(<span class="hljs-params">self, table_data</span>):
+        <span class="hljs-string">"""Parse financial metrics from table"""</span>
+        metrics = {}
+        df = table_data.get(<span class="hljs-string">'dataframe'</span>)
+        
+        <span class="hljs-keyword">if</span> df <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-keyword">for</span> metric <span class="hljs-keyword">in</span> self.metrics:
+                <span class="hljs-comment"># Search for metric in table</span>
+                <span class="hljs-keyword">for</span> col <span class="hljs-keyword">in</span> df.columns:
+                    <span class="hljs-keyword">if</span> metric.lower() <span class="hljs-keyword">in</span> col.lower():
+                        metrics[metric] = df[col].tolist()
+        
+        <span class="hljs-keyword">return</span> metrics
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_executive_summary</span>(<span class="hljs-params">self, qa_results, financial_data</span>):
+        <span class="hljs-string">"""Generate executive summary combining QA and metrics"""</span>
+        summary_parts = []
+        
+        <span class="hljs-comment"># Financial highlights</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'revenue'</span> <span class="hljs-keyword">in</span> financial_data:
+            revenue = financial_data[<span class="hljs-string">'revenue'</span>]
+            summary_parts.append(<span class="hljs-string">f"Revenue: $<span class="hljs-subst">{revenue[-<span class="hljs-number">1</span>]:,<span class="hljs-number">.2</span>f}</span>M"</span>)
+        
+        <span class="hljs-comment"># Key insights from QA</span>
+        <span class="hljs-keyword">for</span> query, result <span class="hljs-keyword">in</span> qa_results.items():
+            <span class="hljs-keyword">if</span> <span class="hljs-string">'growth'</span> <span class="hljs-keyword">in</span> query.lower() <span class="hljs-keyword">or</span> <span class="hljs-string">'driver'</span> <span class="hljs-keyword">in</span> query.lower():
+                summary_parts.append(<span class="hljs-string">f"Growth Drivers: <span class="hljs-subst">{result[<span class="hljs-string">'answer'</span>][:<span class="hljs-number">200</span>]}</span>..."</span>)
+        
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"\n\n"</span>.join(summary_parts)
+
+<span class="hljs-comment"># Usage</span>
+analyzer = FinancialReportAnalyzer()
+results = analyzer.analyze_report(<span class="hljs-string">'./data/Q3_2024_Report.pdf'</span>)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Executive Summary:"</span>)
+<span class="hljs-built_in">print</span>(results[<span class="hljs-string">'executive_summary'</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\nFinancial Metrics:"</span>)
+<span class="hljs-built_in">print</span>(results[<span class="hljs-string">'financial_metrics'</span>])</code></pre><h3 id="bf15" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Use Case 3: Scientific Research Assistant</h3><p class="leading-8 mt-3">Scenario: Help researchers navigate scientific papers with complex equations, figures, and experimental data.</p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># research_assistant.py</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ScientificResearchAssistant</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.rag_system = MultimodalRAGSystem()
+        self.paper_metadata = {}
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ingest_research_papers</span>(<span class="hljs-params">self, paper_paths</span>):
+        <span class="hljs-string">"""Ingest scientific papers with metadata extraction"""</span>
+        <span class="hljs-keyword">for</span> paper_path <span class="hljs-keyword">in</span> paper_paths:
+            <span class="hljs-comment"># Extract paper metadata</span>
+            metadata = self.extract_paper_metadata(paper_path)
+            self.paper_metadata[paper_path] = metadata
+        
+        <span class="hljs-comment"># Ingest into RAG system</span>
+        self.rag_system.ingest_documents(paper_paths)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_paper_metadata</span>(<span class="hljs-params">self, paper_path</span>):
+        <span class="hljs-string">"""Extract title, authors, abstract, citations"""</span>
+        <span class="hljs-comment"># Implementation using PDF parsing</span>
+        doc = fitz.<span class="hljs-built_in">open</span>(paper_path)
+        first_page = doc[<span class="hljs-number">0</span>].get_text()
+        
+        metadata = {
+            <span class="hljs-string">'title'</span>: self.extract_title(first_page),
+            <span class="hljs-string">'authors'</span>: self.extract_authors(first_page),
+            <span class="hljs-string">'abstract'</span>: self.extract_abstract(first_page),
+            <span class="hljs-string">'year'</span>: self.extract_year(first_page)
+        }
+        
+        doc.close()
+        <span class="hljs-keyword">return</span> metadata
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">answer_research_question</span>(<span class="hljs-params">self, question, include_equations=<span class="hljs-literal">True</span></span>):
+        <span class="hljs-string">"""Answer research questions with equation and figure support"""</span>
+        result = self.rag_system.query(question)
+        
+        <span class="hljs-comment"># Enhance with equations if relevant</span>
+        <span class="hljs-keyword">if</span> include_equations:
+            equations = self.extract_relevant_equations(result)
+            <span class="hljs-keyword">if</span> equations:
+                result[<span class="hljs-string">'equations'</span>] = equations
+        
+        <span class="hljs-comment"># Add figure references</span>
+        figures = self.extract_relevant_figures(result)
+        <span class="hljs-keyword">if</span> figures:
+            result[<span class="hljs-string">'figures'</span>] = figures
+        
+        <span class="hljs-comment"># Add citation information</span>
+        result[<span class="hljs-string">'citations'</span>] = self.generate_citations(result)
+        
+        <span class="hljs-keyword">return</span> result
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_relevant_equations</span>(<span class="hljs-params">self, result</span>):
+        <span class="hljs-string">"""Extract equations from retrieved sources"""</span>
+        equations = []
+        <span class="hljs-keyword">for</span> source <span class="hljs-keyword">in</span> result.get(<span class="hljs-string">'sources'</span>, []):
+            <span class="hljs-keyword">if</span> source[<span class="hljs-string">'modality'</span>] == <span class="hljs-string">'equation'</span>:
+                equations.append({
+                    <span class="hljs-string">'latex'</span>: source[<span class="hljs-string">'content'</span>],
+                    <span class="hljs-string">'context'</span>: source.get(<span class="hljs-string">'metadata'</span>, {}).get(<span class="hljs-string">'context'</span>, <span class="hljs-string">''</span>)
+                })
+        <span class="hljs-keyword">return</span> equations
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_relevant_figures</span>(<span class="hljs-params">self, result</span>):
+        <span class="hljs-string">"""Extract figures from retrieved sources"""</span>
+        figures = []
+        <span class="hljs-keyword">for</span> source <span class="hljs-keyword">in</span> result.get(<span class="hljs-string">'sources'</span>, []):
+            <span class="hljs-keyword">if</span> source[<span class="hljs-string">'modality'</span>] == <span class="hljs-string">'image'</span>:
+                caption = source.get(<span class="hljs-string">'metadata'</span>, {}).get(<span class="hljs-string">'caption'</span>, <span class="hljs-string">''</span>)
+                <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(word <span class="hljs-keyword">in</span> caption.lower() <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> [<span class="hljs-string">'figure'</span>, <span class="hljs-string">'fig'</span>, <span class="hljs-string">'plot'</span>, <span class="hljs-string">'graph'</span>]):
+                    figures.append({
+                        <span class="hljs-string">'caption'</span>: caption,
+                        <span class="hljs-string">'page'</span>: source.get(<span class="hljs-string">'metadata'</span>, {}).get(<span class="hljs-string">'page'</span>),
+                        <span class="hljs-string">'source'</span>: source.get(<span class="hljs-string">'metadata'</span>, {}).get(<span class="hljs-string">'source'</span>)
+                    })
+        <span class="hljs-keyword">return</span> figures
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_citations</span>(<span class="hljs-params">self, result</span>):
+        <span class="hljs-string">"""Generate proper citations for sources"""</span>
+        citations = []
+        seen_sources = <span class="hljs-built_in">set</span>()
+        
+        <span class="hljs-keyword">for</span> source <span class="hljs-keyword">in</span> result.get(<span class="hljs-string">'sources'</span>, []):
+            source_file = source.get(<span class="hljs-string">'metadata'</span>, {}).get(<span class="hljs-string">'source'</span>)
+            <span class="hljs-keyword">if</span> source_file <span class="hljs-keyword">and</span> source_file <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> seen_sources:
+                metadata = self.paper_metadata.get(source_file, {})
+                citation = self.format_citation(metadata)
+                citations.append(citation)
+                seen_sources.add(source_file)
+        
+        <span class="hljs-keyword">return</span> citations
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">format_citation</span>(<span class="hljs-params">self, metadata</span>):
+        <span class="hljs-string">"""Format citation in academic style"""</span>
+        authors = metadata.get(<span class="hljs-string">'authors'</span>, <span class="hljs-string">'Unknown'</span>)
+        year = metadata.get(<span class="hljs-string">'year'</span>, <span class="hljs-string">'n.d.'</span>)
+        title = metadata.get(<span class="hljs-string">'title'</span>, <span class="hljs-string">'Untitled'</span>)
+        
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{authors}</span> (<span class="hljs-subst">{year}</span>). <span class="hljs-subst">{title}</span>."</span>
+
+<span class="hljs-comment"># Usage</span>
+assistant = ScientificResearchAssistant()
+papers = [
+    <span class="hljs-string">'./papers/machine_learning_2024.pdf'</span>,
+    <span class="hljs-string">'./papers/neural_networks_advances.pdf'</span>
+]
+assistant.ingest_research_papers(papers)
+
+question = <span class="hljs-string">"What are the latest advances in transformer architectures?"</span>
+answer = assistant.answer_research_question(question)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Answer: <span class="hljs-subst">{answer[<span class="hljs-string">'answer'</span>]}</span>\n"</span>)
+<span class="hljs-keyword">if</span> <span class="hljs-string">'equations'</span> <span class="hljs-keyword">in</span> answer:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Relevant Equations:"</span>)
+    <span class="hljs-keyword">for</span> eq <span class="hljs-keyword">in</span> answer[<span class="hljs-string">'equations'</span>]:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  <span class="hljs-subst">{eq[<span class="hljs-string">'latex'</span>]}</span>"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\nCitations:"</span>)
+<span class="hljs-keyword">for</span> citation <span class="hljs-keyword">in</span> answer[<span class="hljs-string">'citations'</span>]:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  <span class="hljs-subst">{citation}</span>"</span>)</code></pre><h3 id="accb" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Performance Optimization and Best Practices ⚡</h3><p class="leading-8 mt-3">Let me share production-ready optimization strategies I've learned from implementing RAG-Anything at scale.</p><h3 id="2b5d" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">1. Chunking Strategy for Multimodal Content</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">OptimizedChunker</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, max_chunk_size=<span class="hljs-number">512</span>, overlap=<span class="hljs-number">50</span></span>):
+        self.max_chunk_size = max_chunk_size
+        self.overlap = overlap
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">chunk_document</span>(<span class="hljs-params">self, elements</span>):
+        <span class="hljs-string">"""Intelligent chunking that preserves multimodal context"""</span>
+        chunks = []
+        current_chunk = []
+        current_size = <span class="hljs-number">0</span>
+        
+        <span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> elements:
+            element_size = self.estimate_size(element)
+            
+            <span class="hljs-comment"># If adding this element exceeds max size, finalize current chunk</span>
+            <span class="hljs-keyword">if</span> current_size + element_size &gt; self.max_chunk_size <span class="hljs-keyword">and</span> current_chunk:
+                chunks.append(self.finalize_chunk(current_chunk))
+                
+                <span class="hljs-comment"># Start new chunk with overlap</span>
+                current_chunk = self.create_overlap_chunk(current_chunk)
+                current_size = <span class="hljs-built_in">sum</span>(self.estimate_size(e) <span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> current_chunk)
+            
+            current_chunk.append(element)
+            current_size += element_size
+        
+        <span class="hljs-comment"># Add final chunk</span>
+        <span class="hljs-keyword">if</span> current_chunk:
+            chunks.append(self.finalize_chunk(current_chunk))
+        
+        <span class="hljs-keyword">return</span> chunks
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">estimate_size</span>(<span class="hljs-params">self, element</span>):
+        <span class="hljs-string">"""Estimate token size of element"""</span>
+        modality = element[<span class="hljs-string">'modality'</span>]
+        
+        <span class="hljs-keyword">if</span> modality == <span class="hljs-string">'text'</span>:
+            <span class="hljs-comment"># Rough estimate: 1 token ≈ 4 characters</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(element[<span class="hljs-string">'content'</span>]) // <span class="hljs-number">4</span>
+        <span class="hljs-keyword">elif</span> modality == <span class="hljs-string">'table'</span>:
+            <span class="hljs-comment"># Tables are token-heavy</span>
+            rows = element[<span class="hljs-string">'content'</span>].get(<span class="hljs-string">'rows'</span>, <span class="hljs-number">0</span>)
+            cols = element[<span class="hljs-string">'content'</span>].get(<span class="hljs-string">'columns'</span>, <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> rows * cols * <span class="hljs-number">2</span>
+        <span class="hljs-keyword">elif</span> modality <span class="hljs-keyword">in</span> [<span class="hljs-string">'image'</span>, <span class="hljs-string">'equation'</span>]:
+            <span class="hljs-comment"># Fixed token cost for non-text elements</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-number">100</span>
+        
+        <span class="hljs-keyword">return</span> <span class="hljs-number">50</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">create_overlap_chunk</span>(<span class="hljs-params">self, previous_chunk</span>):
+        <span class="hljs-string">"""Create overlap from previous chunk"""</span>
+        overlap_elements = []
+        overlap_size = <span class="hljs-number">0</span>
+        
+        <span class="hljs-comment"># Take elements from end of previous chunk</span>
+        <span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> <span class="hljs-built_in">reversed</span>(previous_chunk):
+            element_size = self.estimate_size(element)
+            <span class="hljs-keyword">if</span> overlap_size + element_size &lt;= self.overlap:
+                overlap_elements.insert(<span class="hljs-number">0</span>, element)
+                overlap_size += element_size
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-keyword">break</span>
+        
+        <span class="hljs-keyword">return</span> overlap_elements
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">finalize_chunk</span>(<span class="hljs-params">self, chunk_elements</span>):
+        <span class="hljs-string">"""Finalize chunk with metadata"""</span>
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">'elements'</span>: chunk_elements,
+            <span class="hljs-string">'modalities'</span>: [e[<span class="hljs-string">'modality'</span>] <span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> chunk_elements],
+            <span class="hljs-string">'size'</span>: <span class="hljs-built_in">sum</span>(self.estimate_size(e) <span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> chunk_elements),
+            <span class="hljs-string">'has_cross_modal'</span>: <span class="hljs-built_in">len</span>(<span class="hljs-built_in">set</span>(e[<span class="hljs-string">'modality'</span>] <span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> chunk_elements)) &gt; <span class="hljs-number">1</span>
+        }</code></pre><h3 id="7e06" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">2. Caching Strategy for Embeddings</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">import</span> hashlib
+<span class="hljs-keyword">import</span> pickle
+<span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">EmbeddingCache</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, cache_dir=<span class="hljs-string">'./cache/embeddings'</span></span>):
+        self.cache_dir = Path(cache_dir)
+        self.cache_dir.mkdir(parents=<span class="hljs-literal">True</span>, exist_ok=<span class="hljs-literal">True</span>)
+        self.memory_cache = {}
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_cache_key</span>(<span class="hljs-params">self, content, modality</span>):
+        <span class="hljs-string">"""Generate unique cache key"""</span>
+        content_str = <span class="hljs-built_in">str</span>(content)
+        key_string = <span class="hljs-string">f"<span class="hljs-subst">{modality}</span>:<span class="hljs-subst">{content_str}</span>"</span>
+        <span class="hljs-keyword">return</span> hashlib.md5(key_string.encode()).hexdigest()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get</span>(<span class="hljs-params">self, content, modality</span>):
+        <span class="hljs-string">"""Retrieve cached embedding"""</span>
+        cache_key = self.get_cache_key(content, modality)
+        
+        <span class="hljs-comment"># Check memory cache first</span>
+        <span class="hljs-keyword">if</span> cache_key <span class="hljs-keyword">in</span> self.memory_cache:
+            <span class="hljs-keyword">return</span> self.memory_cache[cache_key]
+        
+        <span class="hljs-comment"># Check disk cache</span>
+        cache_file = self.cache_dir / <span class="hljs-string">f"<span class="hljs-subst">{cache_key}</span>.pkl"</span>
+        <span class="hljs-keyword">if</span> cache_file.exists():
+            <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(cache_file, <span class="hljs-string">'rb'</span>) <span class="hljs-keyword">as</span> f:
+                embedding = pickle.load(f)
+                self.memory_cache[cache_key] = embedding
+                <span class="hljs-keyword">return</span> embedding
+        
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">set</span>(<span class="hljs-params">self, content, modality, embedding</span>):
+        <span class="hljs-string">"""Cache embedding"""</span>
+        cache_key = self.get_cache_key(content, modality)
+        
+        <span class="hljs-comment"># Store in memory</span>
+        self.memory_cache[cache_key] = embedding
+        
+        <span class="hljs-comment"># Store on disk</span>
+        cache_file = self.cache_dir / <span class="hljs-string">f"<span class="hljs-subst">{cache_key}</span>.pkl"</span>
+        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(cache_file, <span class="hljs-string">'wb'</span>) <span class="hljs-keyword">as</span> f:
+            pickle.dump(embedding, f)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">clear</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""Clear all caches"""</span>
+        self.memory_cache.clear()
+        <span class="hljs-keyword">for</span> cache_file <span class="hljs-keyword">in</span> self.cache_dir.glob(<span class="hljs-string">'*.pkl'</span>):
+            cache_file.unlink()
+
+<span class="hljs-comment"># Usage in embedder</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">CachedMultiModalEmbedder</span>(<span class="hljs-title class_ inherited__">MultiModalEmbedder</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-built_in">super</span>().__init__()
+        self.cache = EmbeddingCache()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">embed</span>(<span class="hljs-params">self, content, modality_type</span>):
+        <span class="hljs-comment"># Check cache first</span>
+        cached_embedding = self.cache.get(content, modality_type)
+        <span class="hljs-keyword">if</span> cached_embedding <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-keyword">return</span> cached_embedding
+        
+        <span class="hljs-comment"># Generate new embedding</span>
+        embedding = <span class="hljs-built_in">super</span>().embed(content, modality_type)
+        
+        <span class="hljs-comment"># Cache it</span>
+        self.cache.<span class="hljs-built_in">set</span>(content, modality_type, embedding)
+        
+        <span class="hljs-keyword">return</span> embedding</code></pre><h3 id="b13d" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">3. Batch Processing for Large Document Sets</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">from</span> concurrent.futures <span class="hljs-keyword">import</span> ThreadPoolExecutor, as_completed
+<span class="hljs-keyword">from</span> tqdm <span class="hljs-keyword">import</span> tqdm
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">BatchProcessor</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, max_workers=<span class="hljs-number">4</span></span>):
+        self.max_workers = max_workers
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">process_documents_batch</span>(<span class="hljs-params">self, document_paths, rag_system</span>):
+        <span class="hljs-string">"""Process multiple documents in parallel"""</span>
+        results = []
+        
+        <span class="hljs-keyword">with</span> ThreadPoolExecutor(max_workers=self.max_workers) <span class="hljs-keyword">as</span> executor:
+            <span class="hljs-comment"># Submit all tasks</span>
+            future_to_doc = {
+                executor.submit(self.process_single_document, doc_path, rag_system): doc_path
+                <span class="hljs-keyword">for</span> doc_path <span class="hljs-keyword">in</span> document_paths
+            }
+            
+            <span class="hljs-comment"># Process completed tasks with progress bar</span>
+            <span class="hljs-keyword">with</span> tqdm(total=<span class="hljs-built_in">len</span>(document_paths), desc=<span class="hljs-string">"Processing documents"</span>) <span class="hljs-keyword">as</span> pbar:
+                <span class="hljs-keyword">for</span> future <span class="hljs-keyword">in</span> as_completed(future_to_doc):
+                    doc_path = future_to_doc[future]
+                    <span class="hljs-keyword">try</span>:
+                        result = future.result()
+                        results.append(result)
+                    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+                        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Error processing <span class="hljs-subst">{doc_path}</span>: <span class="hljs-subst">{<span class="hljs-built_in">str</span>(e)}</span>"</span>)
+                    <span class="hljs-keyword">finally</span>:
+                        pbar.update(<span class="hljs-number">1</span>)
+        
+        <span class="hljs-keyword">return</span> results
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">process_single_document</span>(<span class="hljs-params">self, doc_path, rag_system</span>):
+        <span class="hljs-string">"""Process a single document"""</span>
+        <span class="hljs-keyword">try</span>:
+            elements = rag_system.parser.parse(doc_path)
+            
+            <span class="hljs-comment"># Batch embed elements</span>
+            embeddings = self.batch_embed(elements, rag_system.embedder)
+            
+            <span class="hljs-keyword">for</span> element, embedding <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(elements, embeddings):
+                element[<span class="hljs-string">'embedding'</span>] = embedding
+            
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-string">'path'</span>: doc_path,
+                <span class="hljs-string">'elements'</span>: elements,
+                <span class="hljs-string">'status'</span>: <span class="hljs-string">'success'</span>
+            }
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-string">'path'</span>: doc_path,
+                <span class="hljs-string">'error'</span>: <span class="hljs-built_in">str</span>(e),
+                <span class="hljs-string">'status'</span>: <span class="hljs-string">'failed'</span>
+            }
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">batch_embed</span>(<span class="hljs-params">self, elements, embedder, batch_size=<span class="hljs-number">32</span></span>):
+        <span class="hljs-string">"""Batch embedding for efficiency"""</span>
+        embeddings = []
+        
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(elements), batch_size):
+            batch = elements[i:i + batch_size]
+            
+            <span class="hljs-comment"># Group by modality for efficient batching</span>
+            modality_groups = {}
+            <span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> batch:
+                modality = element[<span class="hljs-string">'modality'</span>]
+                <span class="hljs-keyword">if</span> modality <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> modality_groups:
+                    modality_groups[modality] = []
+                modality_groups[modality].append(element)
+            
+            <span class="hljs-comment"># Embed each modality group</span>
+            batch_embeddings = []
+            <span class="hljs-keyword">for</span> modality, group <span class="hljs-keyword">in</span> modality_groups.items():
+                contents = [e[<span class="hljs-string">'content'</span>] <span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> group]
+                group_embeddings = embedder.embed_batch(contents, modality)
+                batch_embeddings.extend(group_embeddings)
+            
+            embeddings.extend(batch_embeddings)
+        
+        <span class="hljs-keyword">return</span> embeddings</code></pre><h3 id="b8e0" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">4. Query Optimization</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">QueryOptimizer</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.query_cache = {}
+        self.query_rewriter = QueryRewriter()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">optimize_query</span>(<span class="hljs-params">self, query</span>):
+        <span class="hljs-string">"""Optimize query for better retrieval"""</span>
+        <span class="hljs-comment"># Check cache</span>
+        <span class="hljs-keyword">if</span> query <span class="hljs-keyword">in</span> self.query_cache:
+            <span class="hljs-keyword">return</span> self.query_cache[query]
+        
+        <span class="hljs-comment"># Expand query with synonyms and related terms</span>
+        expanded_query = self.query_rewriter.expand(query)
+        
+        <span class="hljs-comment"># Identify modality hints</span>
+        modality_hints = self.extract_modality_hints(query)
+        
+        optimized = {
+            <span class="hljs-string">'original'</span>: query,
+            <span class="hljs-string">'expanded'</span>: expanded_query,
+            <span class="hljs-string">'modality_hints'</span>: modality_hints,
+            <span class="hljs-string">'boost_factors'</span>: self.calculate_boost_factors(modality_hints)
+        }
+        
+        self.query_cache[query] = optimized
+        <span class="hljs-keyword">return</span> optimized
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_modality_hints</span>(<span class="hljs-params">self, query</span>):
+        <span class="hljs-string">"""Extract hints about expected modalities"""</span>
+        hints = []
+        
+        query_lower = query.lower()
+        
+        <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(word <span class="hljs-keyword">in</span> query_lower <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> [<span class="hljs-string">'show'</span>, <span class="hljs-string">'diagram'</span>, <span class="hljs-string">'figure'</span>, <span class="hljs-string">'image'</span>, <span class="hljs-string">'picture'</span>]):
+            hints.append(<span class="hljs-string">'image'</span>)
+        
+        <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(word <span class="hljs-keyword">in</span> query_lower <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> [<span class="hljs-string">'table'</span>, <span class="hljs-string">'data'</span>, <span class="hljs-string">'numbers'</span>, <span class="hljs-string">'statistics'</span>]):
+            hints.append(<span class="hljs-string">'table'</span>)
+        
+        <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(word <span class="hljs-keyword">in</span> query_lower <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> [<span class="hljs-string">'equation'</span>, <span class="hljs-string">'formula'</span>, <span class="hljs-string">'calculate'</span>, <span class="hljs-string">'mathematical'</span>]):
+            hints.append(<span class="hljs-string">'equation'</span>)
+        
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> hints:
+            hints.append(<span class="hljs-string">'text'</span>)  <span class="hljs-comment"># Default to text</span>
+        
+        <span class="hljs-keyword">return</span> hints
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_boost_factors</span>(<span class="hljs-params">self, modality_hints</span>):
+        <span class="hljs-string">"""Calculate boost factors for different modalities"""</span>
+        boost_factors = {
+            <span class="hljs-string">'text'</span>: <span class="hljs-number">1.0</span>,
+            <span class="hljs-string">'image'</span>: <span class="hljs-number">1.0</span>,
+            <span class="hljs-string">'table'</span>: <span class="hljs-number">1.0</span>,
+            <span class="hljs-string">'equation'</span>: <span class="hljs-number">1.0</span>
+        }
+        
+        <span class="hljs-comment"># Boost hinted modalities</span>
+        <span class="hljs-keyword">for</span> hint <span class="hljs-keyword">in</span> modality_hints:
+            boost_factors[hint] = <span class="hljs-number">1.5</span>
+        
+        <span class="hljs-keyword">return</span> boost_factors
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">QueryRewriter</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.synonym_map = self.load_synonyms()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">expand</span>(<span class="hljs-params">self, query</span>):
+        <span class="hljs-string">"""Expand query with synonyms"""</span>
+        words = query.split()
+        expanded_words = []
+        
+        <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> words:
+            expanded_words.append(word)
+            <span class="hljs-keyword">if</span> word.lower() <span class="hljs-keyword">in</span> self.synonym_map:
+                synonyms = self.synonym_map[word.lower()]
+                expanded_words.extend(synonyms[:<span class="hljs-number">2</span>])  <span class="hljs-comment"># Add top 2 synonyms</span>
+        
+        <span class="hljs-keyword">return</span> <span class="hljs-string">' '</span>.join(expanded_words)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">load_synonyms</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""Load synonym mappings"""</span>
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">'show'</span>: [<span class="hljs-string">'display'</span>, <span class="hljs-string">'present'</span>],
+            <span class="hljs-string">'explain'</span>: [<span class="hljs-string">'describe'</span>, <span class="hljs-string">'clarify'</span>],
+            <span class="hljs-string">'calculate'</span>: [<span class="hljs-string">'compute'</span>, <span class="hljs-string">'determine'</span>],
+            <span class="hljs-comment"># Add more synonyms...</span>
+        }</code></pre><h3 id="8ad4" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Deployment and Production Considerations 🚀</h3><h3 id="942e" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Docker Deployment</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-bash hljs" data-highlighted="yes"><span class="hljs-comment"># Dockerfile</span>
+FROM python:3.9-slim
+
+WORKDIR /app
+
+<span class="hljs-comment"># Install system dependencies</span>
+RUN apt-get update &amp;&amp; apt-get install -y \
+    build-essential \
+    git \
+    &amp;&amp; <span class="hljs-built_in">rm</span> -rf /var/lib/apt/lists/*
+
+<span class="hljs-comment"># Copy requirements</span>
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+<span class="hljs-comment"># Copy application code</span>
+COPY . .
+
+<span class="hljs-comment"># Create necessary directories</span>
+RUN <span class="hljs-built_in">mkdir</span> -p /app/data /app/cache /app/logs
+
+<span class="hljs-comment"># Set environment variables</span>
+ENV PYTHONUNBUFFERED=1
+ENV VECTOR_DB_PATH=/app/data/vector_store
+
+<span class="hljs-comment"># Expose port</span>
+EXPOSE 8000
+
+<span class="hljs-comment"># Run application</span>
+CMD [<span class="hljs-string">"python"</span>, <span class="hljs-string">"app.py"</span>]
+<span class="hljs-comment"># docker-compose.yml</span>
+version: <span class="hljs-string">'3.8'</span>
+
+services:
+  rag-anything:
+    build: .
+    ports:
+      - <span class="hljs-string">"8000:8000"</span>
+    volumes:
+      - ./data:/app/data
+      - ./cache:/app/cache
+      - ./logs:/app/logs
+    environment:
+      - OPENAI_API_KEY=<span class="hljs-variable">${OPENAI_API_KEY}</span>
+      - VECTOR_DB_TYPE=chromadb
+      - MAX_WORKERS=4
+    restart: unless-stopped
+  
+  redis:
+    image: redis:7-alpine
+    ports:
+      - <span class="hljs-string">"6379:6379"</span>
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:</code></pre><h3 id="f3b8" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">FastAPI REST API Implementation</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># api.py</span>
+<span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI, UploadFile, File, HTTPException
+<span class="hljs-keyword">from</span> fastapi.responses <span class="hljs-keyword">import</span> JSONResponse
+<span class="hljs-keyword">from</span> pydantic <span class="hljs-keyword">import</span> BaseModel
+<span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> <span class="hljs-type">List</span>, <span class="hljs-type">Optional</span>
+<span class="hljs-keyword">import</span> uvicorn
+
+app = FastAPI(title=<span class="hljs-string">"RAG-Anything API"</span>, version=<span class="hljs-string">"1.0.0"</span>)
+
+<span class="hljs-comment"># Initialize RAG system</span>
+rag_system = MultimodalRAGSystem()
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">QueryRequest</span>(<span class="hljs-title class_ inherited__">BaseModel</span>):
+    question: <span class="hljs-built_in">str</span>
+    top_k: <span class="hljs-type">Optional</span>[<span class="hljs-built_in">int</span>] = <span class="hljs-number">5</span>
+    return_sources: <span class="hljs-type">Optional</span>[<span class="hljs-built_in">bool</span>] = <span class="hljs-literal">True</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">QueryResponse</span>(<span class="hljs-title class_ inherited__">BaseModel</span>):
+    answer: <span class="hljs-built_in">str</span>
+    confidence: <span class="hljs-built_in">float</span>
+    sources: <span class="hljs-type">Optional</span>[<span class="hljs-type">List</span>[<span class="hljs-built_in">dict</span>]] = <span class="hljs-literal">None</span>
+
+<span class="hljs-meta">@app.post(<span class="hljs-params"><span class="hljs-string">"/ingest"</span></span>)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">ingest_document</span>(<span class="hljs-params">file: UploadFile = File(<span class="hljs-params">...</span>)</span>):
+    <span class="hljs-string">"""Ingest a new document"""</span>
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-comment"># Save uploaded file</span>
+        file_path = <span class="hljs-string">f"./uploads/<span class="hljs-subst">{file.filename}</span>"</span>
+        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(file_path, <span class="hljs-string">"wb"</span>) <span class="hljs-keyword">as</span> f:
+            content = <span class="hljs-keyword">await</span> file.read()
+            f.write(content)
+        
+        <span class="hljs-comment"># Ingest into RAG system</span>
+        num_elements = rag_system.ingest_documents([file_path])
+        
+        <span class="hljs-keyword">return</span> JSONResponse({
+            <span class="hljs-string">"status"</span>: <span class="hljs-string">"success"</span>,
+            <span class="hljs-string">"filename"</span>: file.filename,
+            <span class="hljs-string">"elements_processed"</span>: num_elements
+        })
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        <span class="hljs-keyword">raise</span> HTTPException(status_code=<span class="hljs-number">500</span>, detail=<span class="hljs-built_in">str</span>(e))
+
+<span class="hljs-meta">@app.post(<span class="hljs-params"><span class="hljs-string">"/query"</span>, response_model=QueryResponse</span>)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">query_knowledge_base</span>(<span class="hljs-params">request: QueryRequest</span>):
+    <span class="hljs-string">"""Query the knowledge base"""</span>
+    <span class="hljs-keyword">try</span>:
+        result = rag_system.query(
+            request.question,
+            return_sources=request.return_sources
+        )
+        <span class="hljs-keyword">return</span> QueryResponse(**result)
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        <span class="hljs-keyword">raise</span> HTTPException(status_code=<span class="hljs-number">500</span>, detail=<span class="hljs-built_in">str</span>(e))
+
+<span class="hljs-meta">@app.get(<span class="hljs-params"><span class="hljs-string">"/health"</span></span>)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">health_check</span>():
+    <span class="hljs-string">"""Health check endpoint"""</span>
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">"status"</span>: <span class="hljs-string">"healthy"</span>}
+
+<span class="hljs-meta">@app.get(<span class="hljs-params"><span class="hljs-string">"/stats"</span></span>)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_stats</span>():
+    <span class="hljs-string">"""Get system statistics"""</span>
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-string">"total_documents"</span>: <span class="hljs-built_in">len</span>(rag_system.knowledge_base) <span class="hljs-keyword">if</span> rag_system.knowledge_base <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>,
+        <span class="hljs-string">"cache_size"</span>: <span class="hljs-built_in">len</span>(rag_system.embedder.cache.memory_cache),
+        <span class="hljs-string">"status"</span>: <span class="hljs-string">"operational"</span>
+    }
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    uvicorn.run(app, host=<span class="hljs-string">"0.0.0.0"</span>, port=<span class="hljs-number">8000</span>)</code></pre><h3 id="c3a7" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Monitoring and Logging</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># monitoring.py</span>
+<span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime
+<span class="hljs-keyword">import</span> json
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">RAGMonitor</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, log_file=<span class="hljs-string">'./logs/rag_system.log'</span></span>):
+        self.logger = self.setup_logger(log_file)
+        self.metrics = {
+            <span class="hljs-string">'queries_processed'</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">'documents_ingested'</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">'average_response_time'</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">'cache_hit_rate'</span>: <span class="hljs-number">0</span>
+        }
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setup_logger</span>(<span class="hljs-params">self, log_file</span>):
+        <span class="hljs-string">"""Setup logging configuration"""</span>
+        logger = logging.getLogger(<span class="hljs-string">'RAGAnything'</span>)
+        logger.setLevel(logging.INFO)
+        
+        <span class="hljs-comment"># File handler</span>
+        fh = logging.FileHandler(log_file)
+        fh.setLevel(logging.INFO)
+        
+        <span class="hljs-comment"># Console handler</span>
+        ch = logging.StreamHandler()
+        ch.setLevel(logging.WARNING)
+        
+        <span class="hljs-comment"># Formatter</span>
+        formatter = logging.Formatter(
+            <span class="hljs-string">'%(asctime)s - %(name)s - %(levelname)s - %(message)s'</span>
+        )
+        fh.setFormatter(formatter)
+        ch.setFormatter(formatter)
+        
+        logger.addHandler(fh)
+        logger.addHandler(ch)
+        
+        <span class="hljs-keyword">return</span> logger
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">log_query</span>(<span class="hljs-params">self, query, response_time, num_results</span>):
+        <span class="hljs-string">"""Log query execution"""</span>
+        self.logger.info(<span class="hljs-string">f"Query: <span class="hljs-subst">{query[:<span class="hljs-number">100</span>]}</span>... | Time: <span class="hljs-subst">{response_time:<span class="hljs-number">.2</span>f}</span>s | Results: <span class="hljs-subst">{num_results}</span>"</span>)
+        self.metrics[<span class="hljs-string">'queries_processed'</span>] += <span class="hljs-number">1</span>
+        self.update_average_response_time(response_time)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">log_ingestion</span>(<span class="hljs-params">self, document_path, num_elements</span>):
+        <span class="hljs-string">"""Log document ingestion"""</span>
+        self.logger.info(<span class="hljs-string">f"Ingested: <span class="hljs-subst">{document_path}</span> | Elements: <span class="hljs-subst">{num_elements}</span>"</span>)
+        self.metrics[<span class="hljs-string">'documents_ingested'</span>] += <span class="hljs-number">1</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">log_error</span>(<span class="hljs-params">self, error_type, error_message</span>):
+        <span class="hljs-string">"""Log errors"""</span>
+        self.logger.error(<span class="hljs-string">f"<span class="hljs-subst">{error_type}</span>: <span class="hljs-subst">{error_message}</span>"</span>)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_average_response_time</span>(<span class="hljs-params">self, new_time</span>):
+        <span class="hljs-string">"""Update average response time"""</span>
+        current_avg = self.metrics[<span class="hljs-string">'average_response_time'</span>]
+        total_queries = self.metrics[<span class="hljs-string">'queries_processed'</span>]
+        
+        self.metrics[<span class="hljs-string">'average_response_time'</span>] = (
+            (current_avg * (total_queries - <span class="hljs-number">1</span>) + new_time) / total_queries
+        )
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_metrics</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""Get current metrics"""</span>
+        <span class="hljs-keyword">return</span> self.metrics
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">export_metrics</span>(<span class="hljs-params">self, output_file=<span class="hljs-string">'./logs/metrics.json'</span></span>):
+        <span class="hljs-string">"""Export metrics to file"""</span>
+        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(output_file, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:
+            json.dump({
+                <span class="hljs-string">'timestamp'</span>: datetime.now().isoformat(),
+                <span class="hljs-string">'metrics'</span>: self.metrics
+            }, f, indent=<span class="hljs-number">2</span>)</code></pre><h3 id="0986" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Advanced Features and Customization 🔧</h3><h3 id="b09e" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Custom Retrieval Strategies</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">HybridRetriever</span>:
+    <span class="hljs-string">"""Advanced hybrid retrieval combining multiple strategies"""</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, knowledge_base</span>):
+        self.knowledge_base = knowledge_base
+        self.strategies = {
+            <span class="hljs-string">'semantic'</span>: SemanticRetrieval(),
+            <span class="hljs-string">'keyword'</span>: KeywordRetrieval(),
+            <span class="hljs-string">'graph'</span>: GraphRetrieval(),
+            <span class="hljs-string">'hybrid'</span>: HybridRetrieval()
+        }
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retrieve</span>(<span class="hljs-params">self, query, strategy=<span class="hljs-string">'hybrid'</span>, top_k=<span class="hljs-number">5</span></span>):
+        <span class="hljs-string">"""Retrieve using specified strategy"""</span>
+        retriever = self.strategies.get(strategy)
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> retriever:
+            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">f"Unknown strategy: <span class="hljs-subst">{strategy}</span>"</span>)
+        
+        <span class="hljs-keyword">return</span> retriever.retrieve(query, self.knowledge_base, top_k)
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">SemanticRetrieval</span>:
+    <span class="hljs-string">"""Pure semantic similarity retrieval"""</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retrieve</span>(<span class="hljs-params">self, query, knowledge_base, top_k</span>):
+        query_embedding = self.embed_query(query)
+        
+        similarities = []
+        <span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> knowledge_base.elements:
+            similarity = self.cosine_similarity(
+                query_embedding,
+                element[<span class="hljs-string">'embedding'</span>]
+            )
+            similarities.append((element, similarity))
+        
+        <span class="hljs-comment"># Sort by similarity</span>
+        similarities.sort(key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-number">1</span>], reverse=<span class="hljs-literal">True</span>)
+        <span class="hljs-keyword">return</span> [elem <span class="hljs-keyword">for</span> elem, score <span class="hljs-keyword">in</span> similarities[:top_k]]
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">GraphRetrieval</span>:
+    <span class="hljs-string">"""Graph-based retrieval using knowledge graph structure"""</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retrieve</span>(<span class="hljs-params">self, query, knowledge_base, top_k</span>):
+        <span class="hljs-comment"># Find initial seed nodes via semantic search</span>
+        seed_nodes = self.find_seed_nodes(query, knowledge_base, top_k // <span class="hljs-number">2</span>)
+        
+        <span class="hljs-comment"># Expand via graph traversal</span>
+        expanded_nodes = <span class="hljs-built_in">set</span>()
+        <span class="hljs-keyword">for</span> seed <span class="hljs-keyword">in</span> seed_nodes:
+            neighbors = knowledge_base.graph.get_neighbors(
+                seed.<span class="hljs-built_in">id</span>,
+                max_hops=<span class="hljs-number">2</span>
+            )
+            expanded_nodes.update(neighbors)
+        
+        <span class="hljs-comment"># Re-rank expanded set</span>
+        reranked = self.rerank_by_relevance(query, <span class="hljs-built_in">list</span>(expanded_nodes))
+        <span class="hljs-keyword">return</span> reranked[:top_k]</code></pre><h3 id="66d3" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Fine-tuning Embeddings for Domain-Specific Use</h3><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">from</span> sentence_transformers <span class="hljs-keyword">import</span> SentenceTransformer, InputExample, losses
+<span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">DomainEmbeddingTrainer</span>:
+    <span class="hljs-string">"""Fine-tune embeddings for specific domains"""</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, base_model=<span class="hljs-string">'all-MiniLM-L6-v2'</span></span>):
+        self.model = SentenceTransformer(base_model)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">prepare_training_data</span>(<span class="hljs-params">self, document_pairs</span>):
+        <span class="hljs-string">"""Prepare training examples from document pairs"""</span>
+        examples = []
+        
+        <span class="hljs-keyword">for</span> pair <span class="hljs-keyword">in</span> document_pairs:
+            <span class="hljs-comment"># Positive examples (similar documents)</span>
+            examples.append(InputExample(
+                texts=[pair[<span class="hljs-string">'doc1'</span>], pair[<span class="hljs-string">'doc2'</span>]],
+                label=<span class="hljs-number">1.0</span>
+            ))
+            
+            <span class="hljs-comment"># Negative examples (dissimilar documents)</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-string">'negative'</span> <span class="hljs-keyword">in</span> pair:
+                examples.append(InputExample(
+                    texts=[pair[<span class="hljs-string">'doc1'</span>], pair[<span class="hljs-string">'negative'</span>]],
+                    label=<span class="hljs-number">0.0</span>
+                ))
+        
+        <span class="hljs-keyword">return</span> examples
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">train</span>(<span class="hljs-params">self, training_examples, epochs=<span class="hljs-number">3</span>, batch_size=<span class="hljs-number">16</span></span>):
+        <span class="hljs-string">"""Fine-tune the model"""</span>
+        train_dataloader = DataLoader(
+            training_examples,
+            shuffle=<span class="hljs-literal">True</span>,
+            batch_size=batch_size
+        )
+        
+        train_loss = losses.CosineSimilarityLoss(self.model)
+        
+        self.model.fit(
+            train_objectives=[(train_dataloader, train_loss)],
+            epochs=epochs,
+            warmup_steps=<span class="hljs-number">100</span>
+        )
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">save_model</span>(<span class="hljs-params">self, output_path</span>):
+        <span class="hljs-string">"""Save fine-tuned model"""</span>
+        self.model.save(output_path)
+
+<span class="hljs-comment"># Usage</span>
+trainer = DomainEmbeddingTrainer()
+
+<span class="hljs-comment"># Prepare domain-specific training data</span>
+training_pairs = [
+    {
+        <span class="hljs-string">'doc1'</span>: <span class="hljs-string">'Technical specification for API endpoint'</span>,
+        <span class="hljs-string">'doc2'</span>: <span class="hljs-string">'API documentation and usage examples'</span>,
+        <span class="hljs-string">'negative'</span>: <span class="hljs-string">'Company financial report Q3'</span>
+    },
+    <span class="hljs-comment"># More pairs...</span>
+]
+
+examples = trainer.prepare_training_data(training_pairs)
+trainer.train(examples)
+trainer.save_model(<span class="hljs-string">'./models/domain_embeddings'</span>)</code></pre><h3 id="41ea" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Comparison with Other RAG Frameworks 📊</h3><p class="leading-8 mt-3">Let me give you an honest comparison of RAG-Anything with other popular frameworks:</p><h3 id="0733" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">RAG-Anything vs. LangChain</h3><p class="leading-8 mt-3"><strong>LangChain Strengths:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Mature ecosystem with extensive integrations</li><li class="mt-3">Large community and documentation</li><li class="mt-3">Easy to get started with simple use cases</li><li class="mt-3">Good for text-only RAG</li></ul><p class="leading-8 mt-7"><strong>RAG-Anything Advantages:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Native multimodal support (images, tables, equations)</li><li class="mt-3">Unified graph-based knowledge representation</li><li class="mt-3">Better handling of cross-modal relationships</li><li class="mt-3">Superior performance on complex documents</li></ul><p class="leading-8 mt-7"><strong>When to use RAG-Anything:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Documents with rich visual content</li><li class="mt-3">Scientific papers with equations</li><li class="mt-3">Financial reports with tables and charts</li><li class="mt-3">Technical documentation with diagrams</li></ul><p class="leading-8 mt-7"><strong>When to use LangChain:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Simple text-only RAG</li><li class="mt-3">Need extensive third-party integrations</li><li class="mt-3">Rapid prototyping</li><li class="mt-3">Text-based chatbots</li></ul><h3 id="4101" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">RAG-Anything vs. LlamaIndex</h3><p class="leading-8 mt-3"><strong>LlamaIndex Strengths:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Excellent for structured data</li><li class="mt-3">Strong query engine</li><li class="mt-3">Good documentation indexing</li></ul><p class="leading-8 mt-7"><strong>RAG-Anything Advantages:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Better multimodal handling</li><li class="mt-3">Cross-modal retrieval capabilities</li><li class="mt-3">Graph-based knowledge navigation</li><li class="mt-3">Handles heterogeneous content better</li></ul><h3 id="c120" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Performance Benchmarks</h3><p class="leading-8 mt-3">Based on the research paper, RAG-Anything shows significant improvements:</p><p class="leading-8 mt-7"><strong>Accuracy on Multimodal Benchmarks:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Text-only queries: +5–8% over baseline RAG</li><li class="mt-3">Multimodal queries: +15–25% over traditional RAG</li><li class="mt-3">Long document queries: +30–40% improvement</li></ul><p class="leading-8 mt-7"><strong>Retrieval Quality:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Precision@5: 0.85 (vs 0.72 for text-only RAG)</li><li class="mt-3">Recall@10: 0.91 (vs 0.78 for text-only RAG)</li><li class="mt-3">Cross-modal relevance: 0.88 (new metric)</li></ul><h3 id="d752" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Troubleshooting Common Issues 🔧</h3><h3 id="5010" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Issue 1: Out of Memory Errors</h3><p class="leading-8 mt-3">Problem: System runs out of memory when processing large documents.</p><p class="leading-8 mt-7"><strong>Solution:</strong></p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MemoryEfficientProcessor</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, max_memory_mb=<span class="hljs-number">4096</span></span>):
+        self.max_memory_mb = max_memory_mb
+        self.current_memory = <span class="hljs-number">0</span>
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">process_large_document</span>(<span class="hljs-params">self, doc_path</span>):
+        <span class="hljs-string">"""Process document in chunks to manage memory"""</span>
+        <span class="hljs-comment"># Process in streaming mode</span>
+        <span class="hljs-keyword">with</span> fitz.<span class="hljs-built_in">open</span>(doc_path) <span class="hljs-keyword">as</span> doc:
+            <span class="hljs-keyword">for</span> page_num <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(doc)):
+                <span class="hljs-comment"># Process one page at a time</span>
+                page = doc[page_num]
+                elements = self.parse_page(page)
+                
+                <span class="hljs-comment"># Embed and store immediately</span>
+                self.embed_and_store(elements)
+                
+                <span class="hljs-comment"># Clear page from memory</span>
+                <span class="hljs-keyword">del</span> page
+                
+                <span class="hljs-comment"># Check memory usage</span>
+                <span class="hljs-keyword">if</span> self.check_memory_threshold():
+                    self.flush_to_disk()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">check_memory_threshold</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""Check if memory threshold is reached"""</span>
+        <span class="hljs-keyword">import</span> psutil
+        process = psutil.Process()
+        memory_mb = process.memory_info().rss / <span class="hljs-number">1024</span> / <span class="hljs-number">1024</span>
+        <span class="hljs-keyword">return</span> memory_mb &gt; self.max_memory_mb * <span class="hljs-number">0.8</span></code></pre><h3 id="cc47" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Issue 2: Slow Retrieval Performance</h3><p class="leading-8 mt-3"><strong>Problem:</strong> Queries take too long to execute.</p><p class="leading-8 mt-7"><strong>Solution:</strong></p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-comment"># Implement approximate nearest neighbor search</span>
+<span class="hljs-keyword">from</span> annoy <span class="hljs-keyword">import</span> AnnoyIndex
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">FastRetriever</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, embedding_dim=<span class="hljs-number">384</span></span>):
+        self.index = AnnoyIndex(embedding_dim, <span class="hljs-string">'angular'</span>)
+        self.id_to_element = {}
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_index</span>(<span class="hljs-params">self, elements</span>):
+        <span class="hljs-string">"""Build ANN index for fast retrieval"""</span>
+        <span class="hljs-keyword">for</span> idx, element <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(elements):
+            self.index.add_item(idx, element[<span class="hljs-string">'embedding'</span>])
+            self.id_to_element[idx] = element
+        
+        <span class="hljs-comment"># Build index with 10 trees (trade-off between speed and accuracy)</span>
+        self.index.build(<span class="hljs-number">10</span>)
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">fast_retrieve</span>(<span class="hljs-params">self, query_embedding, top_k=<span class="hljs-number">5</span></span>):
+        <span class="hljs-string">"""Fast approximate retrieval"""</span>
+        indices, distances = self.index.get_nns_by_vector(
+            query_embedding,
+            top_k,
+            include_distances=<span class="hljs-literal">True</span>
+        )
+        
+        results = []
+        <span class="hljs-keyword">for</span> idx, distance <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(indices, distances):
+            element = self.id_to_element[idx]
+            element[<span class="hljs-string">'score'</span>] = <span class="hljs-number">1</span> - distance  <span class="hljs-comment"># Convert distance to similarity</span>
+            results.append(element)
+        
+        <span class="hljs-keyword">return</span> results</code></pre><h3 id="195b" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Issue 3: Poor Quality Answers</h3><p class="leading-8 mt-3"><strong>Problem:</strong> System returns irrelevant or low-quality answers.</p><p class="leading-8 mt-7"><strong>Solution:</strong></p><pre class="flex flex-col justify-center border mt-7 dark:border-gray-700"><button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button><code class="p-2 bg-gray-100 dark:bg-gray-900 overflow-x-auto language-python hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-title class_">AnswerQualityImprover</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.min_confidence_threshold = <span class="hljs-number">0.7</span>
+        self.reranker = CrossEncoderReranker()
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">improve_answer_quality</span>(<span class="hljs-params">self, query, initial_results</span>):
+        <span class="hljs-string">"""Improve answer quality through reranking and filtering"""</span>
+        <span class="hljs-comment"># Step 1: Rerank with cross-encoder</span>
+        reranked = self.reranker.rerank(query, initial_results)
+        
+        <span class="hljs-comment"># Step 2: Filter low-confidence results</span>
+        filtered = [
+            r <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> reranked
+            <span class="hljs-keyword">if</span> r[<span class="hljs-string">'score'</span>] &gt;= self.min_confidence_threshold
+        ]
+        
+        <span class="hljs-comment"># Step 3: Diversify results (avoid redundancy)</span>
+        diversified = self.diversify_results(filtered)
+        
+        <span class="hljs-comment"># Step 4: Add context from knowledge graph</span>
+        enriched = self.add_graph_context(diversified)
+        
+        <span class="hljs-keyword">return</span> enriched
+    
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">diversify_results</span>(<span class="hljs-params">self, results, similarity_threshold=<span class="hljs-number">0.9</span></span>):
+        <span class="hljs-string">"""Remove near-duplicate results"""</span>
+        diverse_results = []
+        
+        <span class="hljs-keyword">for</span> result <span class="hljs-keyword">in</span> results:
+            is_diverse = <span class="hljs-literal">True</span>
+            <span class="hljs-keyword">for</span> existing <span class="hljs-keyword">in</span> diverse_results:
+                similarity = self.calculate_similarity(
+                    result[<span class="hljs-string">'embedding'</span>],
+                    existing[<span class="hljs-string">'embedding'</span>]
+                )
+                <span class="hljs-keyword">if</span> similarity &gt; similarity_threshold:
+                    is_diverse = <span class="hljs-literal">False</span>
+                    <span class="hljs-keyword">break</span>
+            
+            <span class="hljs-keyword">if</span> is_diverse:
+                diverse_results.append(result)
+        
+        <span class="hljs-keyword">return</span> diverse_results</code></pre><h3 id="807d" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Future Roadmap and Community Contributions 🌟</h3><h3 id="e4b5" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Upcoming Features</h3><p class="leading-8 mt-3">The RAG-Anything team is actively developing:</p><p class="leading-8 mt-7"><strong>1. Video Support</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Frame extraction and analysis</li><li class="mt-3">Temporal relationship modeling</li><li class="mt-3">Speech-to-text integration</li></ul><p class="leading-8 mt-7"><strong>2. Real-time Updates</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Incremental indexing</li><li class="mt-3">Live document monitoring</li><li class="mt-3">Streaming ingestion</li></ul><p class="leading-8 mt-7"><strong>3. Multi-language Support</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Cross-lingual retrieval</li><li class="mt-3">Language-specific embeddings</li><li class="mt-3">Translation integration</li></ul><p class="leading-8 mt-7"><strong>4. Enhanced Visualization</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">Interactive knowledge graph explorer</li><li class="mt-3">Retrieval path visualization</li><li class="mt-3">Confidence heatmaps</li></ul><h3 id="d681" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Conclusion and Next Steps 🎯</h3><p class="leading-8 mt-3">RAG-Anything represents a paradigm shift in how we approach knowledge retrieval. By treating multimodal content as interconnected knowledge entities rather than isolated data types, it unlocks capabilities that traditional RAG systems simply can't match.</p><p class="leading-8 mt-7">Key Takeaways:</p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">✅ Unified multimodal knowledge retrieval</li><li class="mt-3">✅ Graph-based cross-modal relationships</li><li class="mt-3">✅ Superior performance on complex documents</li><li class="mt-3">✅ Production-ready architecture</li><li class="mt-3">✅ Open-source and actively maintained</li></ul><p class="leading-8 mt-7"><strong>Your Next Steps:</strong></p><ol class="pl-8 mt-2 list-decimal"><li class="mt-3"><strong>Start Small: </strong>Begin with the basic implementation example</li><li class="mt-3"><strong>Experiment: </strong>Try different document types and queries</li><li class="mt-3"><strong>Optimize: </strong>Implement caching and batch processing</li><li class="mt-3"><strong>Scale: </strong>Deploy with Docker and monitoring</li><li class="mt-3"><strong>Contribute: </strong>Share your improvements with the community</li></ol><p class="leading-8 mt-7"><strong>Resources:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">📚 <a style="text-decoration: underline;" rel="noopener noreferrer" title="" href="https://github.com/HKUDS/RAG-Anything" target="_blank">GitHub Repository</a></li><li class="mt-3">📄 <a style="text-decoration: underline;" rel="noopener noreferrer" title="" href="https://arxiv.org/html/2510.12323v1" target="_blank">Research Paper</a></li></ul><h3 id="8b1f" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Frequently Asked Questions ❓</h3><p class="leading-8 mt-3"><strong>Q: Can RAG-Anything work with my existing vector database? </strong>A: Yes! RAG-Anything supports ChromaDB, Pinecone, Weaviate, and custom implementations.</p><p class="leading-8 mt-7"><strong>Q: What's the minimum hardware requirement? </strong>A: For testing: 8GB RAM, CPU. For production: 16GB+ RAM, GPU recommended.</p><p class="leading-8 mt-7"><strong>Q: How does it handle non-English documents? </strong>A: Use multilingual embedding models like <code class="p-1.5 bg-gray-300 dark:bg-gray-600">paraphrase-multilingual-MiniLM-L12-v2</code>.</p><p class="leading-8 mt-7"><strong>Q: Can I use it commercially? </strong>A: Yes, it's open-source under MIT license.</p><p class="leading-8 mt-7"><strong>Q: What LLMs are supported? </strong>A: OpenAI GPT-4, Anthropic Claude, open-source models like Llama 2, Mistral.</p><h3 id="dfcf" class="font-bold font-sans break-normal text-gray-900 dark:text-gray-100 text-1xl md:text-2xl pt-12">Additional Resources and Learning Path 📖</h3><p class="leading-8 mt-3"><strong>Beginner Track:</strong></p><ol class="pl-8 mt-2 list-decimal"><li class="mt-3">Set up basic RAG-Anything installation</li><li class="mt-3">Process your first PDF document</li><li class="mt-3">Run simple queries</li><li class="mt-3">Understand the dual-graph concept</li></ol><p class="leading-8 mt-7"><strong>Intermediate Track:</strong></p><ol class="pl-8 mt-2 list-decimal"><li class="mt-3">Implement custom parsers</li><li class="mt-3">Fine-tune embeddings</li><li class="mt-3">Optimize retrieval strategies</li><li class="mt-3">Deploy with Docker</li></ol><p class="leading-8 mt-7"><strong>Advanced Track:</strong></p><ol class="pl-8 mt-2 list-decimal"><li class="mt-3">Build domain-specific applications</li><li class="mt-3">Implement custom retrieval algorithms</li><li class="mt-3">Scale to production workloads</li><li class="mt-3">Contribute to the framework</li></ol><p class="leading-8 mt-7"><strong>Recommended Reading:</strong></p><ul class="pl-8 mt-2 list-disc"><li class="mt-3">"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" (Lewis et al.)</li><li class="mt-3">"CLIP: Learning Transferable Visual Models From Natural Language Supervision" (Radford et al.)</li><li class="mt-3">"Graph Neural Networks: A Review of Methods and Applications" (Zhou et al.)</li></ul>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-5">
+            <a title="Rags" target="_blank" href="https://medium.com/tag/rags"><span class="px-2 py-1 text-xs text-green-500 bg-green-100 rounded-full dark:bg-green-800 dark:text-gray-100">#rags</span></a><a title="Llm" target="_blank" href="https://medium.com/tag/llm"><span class="px-2 py-1 text-xs text-green-500 bg-green-100 rounded-full dark:bg-green-800 dark:text-gray-100">#llm</span></a><a title="Agentic Ai" target="_blank" href="https://medium.com/tag/agentic-ai"><span class="px-2 py-1 text-xs text-green-500 bg-green-100 rounded-full dark:bg-green-800 dark:text-gray-100">#agentic-ai</span></a><a title="AI" target="_blank" href="https://medium.com/tag/ai"><span class="px-2 py-1 text-xs text-green-500 bg-green-100 rounded-full dark:bg-green-800 dark:text-gray-100">#ai</span></a><a title="ChatGPT" target="_blank" href="https://medium.com/tag/chatgpt"><span class="px-2 py-1 text-xs text-green-500 bg-green-100 rounded-full dark:bg-green-800 dark:text-gray-100">#chatgpt</span></a>
+        </div>
+        <div class="container w-full pt-12 mx-auto md:max-w-3xl"></div>
+    </div>
+    <style>
+.main-content {
+ letter-spacing: -0.06px;
+ font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+pre {
+    font-size: 75%;
+    background-color: #e3e2e2;
+}
+p code, ul code, li code {
+    font-size: 75%;
+}
+    </style>
+    <script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  hljs.highlightAll();
+
+  document.querySelectorAll('pre code').forEach((el) => {
+        code = el.textContent;
+        el = el.parentElement;
+        el.innerHTML = '<button class="p-1 bg-gray-300 hljs-copy dark:bg-zinc-800">Copy</button>' + el.innerHTML; // append copy button
+        el.getElementsByClassName('hljs-copy')[0].contentCopy = code;
+         el.getElementsByClassName('hljs-copy')[0].addEventListener("click", function () {
+             this.innerText = 'Copying..';
+             if (!navigator.userAgent.toLowerCase().includes('safari')) {
+                 navigator.clipboard.writeText(this.contentCopy);
+             } else {
+                 prompt("Clipboard (Select: ⌘+a > Copy:⌘+c)", this.contentCopy);
+             }
+             this.innerText = 'Copied!';
+             button = this;
+             setTimeout(function () {
+                 button.innerText = 'Copy';
+             }, 1500)
+         });
+});
+  });
+    </script>
+    <style>
+     .hljs-copy {
+         float: right;
+         cursor: pointer;
+     }
+    </style>
+<div id="problemModal" class="fixed inset-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 modal" style="z-index: 999999">
+    <div class="w-11/12 max-h-screen mx-auto rounded shadow-lg modal-container md:max-w-xl">
+        <div class="px-6 py-4 my-8 text-left text-black bg-white modal-content dark:bg-gray-800 dark:text-white">
+            <h1 class="text-3xl font-bold">Reporting a Problem</h1>
+            <div class="mt-3">
+                <p>
+                    Sometimes we have problems displaying some Medium posts.
+                    <br>
+                    <br>
+                </p>
+                <p>If you have a problem that some images aren't loading - try using VPN. Probably you have problem with
+                    access to Medium CDN (or fucking Cloudflare's bot detection algorithms are blocking you).</p>
+            </div>
+            <form action="https://freedium.cfd/https://mayursurani.medium.com/rag-anything-the-complete-guide-to-building-multimodal-ai-systems-with-all-in-one-6b88137fba4e#" method="POST" class="mt-4" id="problem-form">
+                <div class="mb-4">
+                    <label for="problem-description" class="block mb-2 font-bold text-gray-700 dark:text-white">Problem
+                        Description</label>
+                    <textarea id="problem-description" name="problem-description" placeholder="Describe your problem here..." class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" rows="4" required=""></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">Submit</button>
+                    <button type="button" class="px-4 py-2 m-2 font-bold text-white bg-gray-500 rounded modal-close hover:bg-gray-700 focus:outline-none focus:shadow-outline">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+
+    function changeTheme(themeName) {
+        // Source: https://stackoverflow.com/questions/59257368/how-to-dynamically-change-the-theme-using-highlight-js
+        console.log(`Applying theme: ${themeName}`);
+        const existingLink = document.querySelector('link[href*="highlight.js"]');
+        if (existingLink) {
+            existingLink.remove();
+        }
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/${themeName}.min.css`;
+        document.head.appendChild(link);
+        document.querySelector("span").textContent = themeName;
+    }
+
+    function navigateToOrigin() {
+        window.location.href = window.location.origin;
+    }
+
+    function updateThemeIcons() {
+        const isDarkMode = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.getElementById('darkIcon').classList.toggle('hidden', !isDarkMode);
+        document.getElementById('lightIcon').classList.toggle('hidden', isDarkMode);
+    }
+
+    updateThemeIcons();
+
+    document.getElementById('darkModeToggle').addEventListener('click', function () {
+        const isDarkMode = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDarkMode) {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.cssText = "--lightense-backdrop: white;";
+            localStorage.setItem("theme", "light");
+            changeTheme("a11y-light");
+        } else {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.cssText = "--lightense-backdrop: black;";
+            localStorage.setItem("theme", "dark");
+            changeTheme("androidstudio");
+        }
+        updateThemeIcons();
+    })
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        //document.getElementById('darkIcon').classList.remove('hidden');
+        //document.getElementById('lightIcon').classList.add('hidden')
+        changeTheme("androidstudio");
+    } else {
+        document.documentElement.classList.remove('dark')
+        //document.getElementById('lightIcon').classList.remove('hidden');
+        //document.getElementById('darkIcon').classList.add('hidden');
+        changeTheme("a11y-light");
+    }
+</script>
+<script>
+    const openModalButton = document.getElementById('openProblemModal');
+    const closeModalButton = document.querySelector('.modal-close');
+    const modal = document.getElementById('problemModal');
+    const problemDescriptionInput = document.getElementById('problem-description');
+    const submitButton = document.querySelector('form button');
+    const body = document.querySelector('body');
+
+    openModalButton.addEventListener('click', () => {
+        body.classList.add('!overflow-hidden'); // Prevent scrolling on the body
+        modal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        body.classList.remove('!overflow-hidden'); // Re-enable scrolling on the body
+        modal.classList.add('hidden');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            body.classList.remove('!overflow-hidden');
+        }
+    });
+
+    function navigateNoCache() {
+        window.location.href = `/render-no-cache${window.location.pathname}`;
+    }
+
+    const submitForm = async (event) => {
+        event.preventDefault();
+
+        console.log('Form submiting is started!');
+        submitButton.disabled = true;
+
+        // Get the problem description from the input field
+        const problemDescription = problemDescriptionInput.value;
+        const currentPage = window.location.href;
+
+        try {
+            // Send a POST request to the "report-problem" API endpoint
+            const response = await fetch('/report-problem', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ description: problemDescription, page: currentPage }),
+            });
+
+            if (response.ok) {
+                // Report submitted successfully, you can add a success message or further actions here
+                console.log('Problem report submitted successfully.');
+                modal.classList.add('hidden'); // Close the modal
+            } else {
+                // Handle errors, such as non-200 responses
+                console.error('Failed to submit problem report.');
+                submitButton.disabled = false;
+            }
+        } catch (error) {
+            // Handle network errors or other exceptions
+            console.error('An error occurred:', error);
+            submitButton.disabled = false;
+        }
+    };
+
+    document.getElementById('problem-form').onsubmit = submitForm;
+</script>
+<script>
+    const h = document.documentElement, b = document.body;
+    const st = 'scrollTop';
+    const sh = 'scrollHeight';
+    const progress = document.getElementById('progress');
+    const header = document.getElementById('header');
+    const navcontent = document.getElementById('nav-content');
+
+    document.addEventListener('scroll', function () {
+        /* Refresh scroll % width */
+        const scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+        progress.style.setProperty('--scroll', scroll + '%');
+
+        /* Apply classes for slide in bar */
+        const shouldAddClass = window.scrollY > 10;
+    });
+
+    document.getElementById('nav-toggle').onclick = function () {
+        document.getElementById("nav-content").classList.toggle("hidden");
+    }
+
+    window.addEventListener('load', function () {
+        Lightense('img:not(.no-lightense)');
+    }, false);
+</script>
+<!-- <script>
+    var lazyLoadInstance = new LazyLoad({
+        callback_loaded: function (element) {
+            console.log(element);
+            console.log(element.tagName);
+            switch (element.tagName) {
+                case "IMG":
+                    console.log(`${element} is image, wrapping into lightense`);
+                    Lightense(element);
+                    break;
+                case "IFRAME":
+                    const resizeIframe = () => {
+                        console.log(`${element} is iframe, wrapping script`);
+                        let iframeHeight = element.contentWindow.document.body.scrollHeight;
+                        if (iframeHeight == 150) {
+                            iframeHeight = 500;
+                        }
+                        element.style.height = iframeHeight + 'px';
+                    };
+                    window.addEventListener('resize', resizeIframe);
+                    setInterval(resizeIframe, 4500);
+                    resizeIframe();
+                    break;
+            }
+        },
+        callback_error: (element) => {
+            console.log(element);
+            if (element.tagName === "IMG" && element.hasAttribute("data-src")) {
+                const srcAttribute = element.attributes["data-src"].value;
+                if (srcAttribute.startsWith("https://miro.medium.com/v2/")) {
+                    element.setAttribute("src", srcAttribute.replace("https://miro.medium.com/v2/", "https://freedium.cfd/@miro/v2/"));
+                }
+            }
+        }
+    });
+</script> -->
+<script>
+    function navigateToOrigin() {
+        window.location.href = window.location.origin;
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Storage notification
+        const storageNotificationContainer = document.querySelector('.storage-notification-container');
+        const storageCloseButton = storageNotificationContainer ? storageNotificationContainer.querySelector('.storage-close-button') : null;
+        const storageFlagString = "showNotification-storage-20gb-2025";
+
+        function showStorageNotification() {
+            if (storageNotificationContainer && !localStorage.getItem(storageFlagString)) {
+                storageNotificationContainer.style.display = 'block';
+            }
+        }
+
+        function hideStorageNotification() {
+            if (!storageNotificationContainer) return;
+            localStorage.setItem(storageFlagString, 'false');
+            storageNotificationContainer.style.display = 'none';
+        }
+
+        if (storageCloseButton) {
+            storageCloseButton.addEventListener('click', hideStorageNotification);
+        }
+
+        // Show the storage notification by default
+        showStorageNotification();
+    });
+</script>
+
+
+</div><div class="lightense-backdrop"></div></body></html>
